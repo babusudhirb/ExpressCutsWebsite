@@ -62,7 +62,7 @@ export function ClientReviews() {
             <Reveal variant="clip" className="hidden lg:col-span-3 lg:row-start-1 lg:block">
               <figure className="relative h-full overflow-hidden rounded-[18px] bg-charcoal">
                 <Image
-                  src="/images/reviews/reception.webp"
+                  src="/images/reviews/express-cuts-salon-reception-ayyappa-nagar.webp"
                   alt="The lit Express Cuts Men's Salon reception desk in KR Puram"
                   fill
                   sizes="(min-width: 1280px) 300px, 24vw"
@@ -143,10 +143,10 @@ export function Marquee({
     x.set(next);
   });
 
-  const cards = (hidden?: boolean) =>
+  const cards = () =>
     REVIEWS.map((r, i) => (
       <li key={`${r.author}-${i}`} className={cn("shrink-0", cardClassName)}>
-        <ReviewCard review={r} decorative={hidden} />
+        <ReviewCard review={r} />
       </li>
     ));
 
@@ -171,7 +171,7 @@ export function Marquee({
             {cards()}
           </ul>
           <ul aria-hidden inert className="flex" style={{ gap: GAP }}>
-            {cards(true)}
+            {cards()}
           </ul>
         </motion.div>
       </div>
@@ -211,11 +211,11 @@ export function StaticReviews() {
   );
 }
 
-export function ReviewCard({ review: r, decorative }: { review: Review; decorative?: boolean }) {
+export function ReviewCard({ review: r }: { review: Review }) {
   return (
     <figure className="flex h-full flex-col rounded-[18px] border border-line bg-paper p-5 shadow-[0_1px_2px_rgb(18_17_16/0.04)]">
       <figcaption className="flex items-center gap-3">
-        <Avatar src={r.avatar} name={r.author} eager={!decorative} />
+        <Avatar src={r.avatar} name={r.author} />
         <span className="min-w-0">
           <span className="block truncate text-[14.5px] font-semibold leading-snug text-ink">{r.author}</span>
           <span className="mt-0.5 block text-[12.5px] leading-snug text-ink-muted">{r.date}</span>
@@ -233,8 +233,14 @@ export function ReviewCard({ review: r, decorative }: { review: Review; decorati
   );
 }
 
-/** Supplied Google photo, or initials — never a stand-in face. */
-function Avatar({ src, name, eager }: { src?: string; name: string; eager?: boolean }) {
+/**
+ * Supplied Google photo, or initials — never a stand-in face.
+ *
+ * Lazy on every page: the reviews sit far below the fold, and these are
+ * cross-origin images. Loading them eagerly had Next preload three
+ * googleusercontent URLs in <head>, competing with the hero for the LCP.
+ */
+function Avatar({ src, name }: { src?: string; name: string }) {
   const [failed, setFailed] = useState(false);
   if (src && !failed) {
     return (
@@ -244,7 +250,7 @@ function Avatar({ src, name, eager }: { src?: string; name: string; eager?: bool
         width={40}
         height={40}
         unoptimized
-        loading={eager ? "eager" : "lazy"}
+        loading="lazy"
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
         className="size-10 shrink-0 rounded-full bg-cream object-cover"

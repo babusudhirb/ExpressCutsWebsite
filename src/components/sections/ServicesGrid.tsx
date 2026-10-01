@@ -39,17 +39,30 @@ export function ServicesGrid() {
   );
 }
 
-/** Pages that exist; the rest still land on the "coming soon" page */
+/** The service pages that exist today */
 const BUILT = new Set(["/hair", "/beard", "/facial", "/hair-spa", "/hair-color", "/offers", "/gallery", "/our-story"]);
 
+const CARD = "group relative block aspect-[4/5] overflow-hidden rounded-[18px] bg-paper";
+
+/**
+ * A card links only where there is a page to link to. Skin Care and Keratin are
+ * on the menu but have no page yet, so those cards stay exactly as they look and
+ * simply do not navigate — no link to a 404.
+ */
 function ServiceCard({ service: s }: { service: Service }) {
+  const inner = <ServiceCardInner service={s} />;
+  return BUILT.has(s.href) ? (
+    <Link href={s.href} className={CARD}>
+      {inner}
+    </Link>
+  ) : (
+    <div className={CARD}>{inner}</div>
+  );
+}
+
+function ServiceCardInner({ service: s }: { service: Service }) {
   return (
-    <Link
-      href={s.href}
-      /* Don't prefetch a page that isn't built yet — it only 404s in the console */
-      prefetch={BUILT.has(s.href) ? undefined : false}
-      className="group relative block aspect-[4/5] overflow-hidden rounded-[18px] bg-paper"
-    >
+    <>
       <div className="absolute inset-0 transition-transform duration-[1400ms] ease-editorial group-hover:scale-[1.05]">
         <Image
           src={s.image}
@@ -81,6 +94,6 @@ function ServiceCard({ service: s }: { service: Service }) {
           <ArrowRight className="size-[15px] transition-transform duration-500 ease-editorial group-hover:translate-x-0.5" strokeWidth={1.6} />
         </span>
       </div>
-    </Link>
+    </>
   );
 }

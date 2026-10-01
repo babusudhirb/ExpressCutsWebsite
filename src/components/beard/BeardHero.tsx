@@ -53,7 +53,7 @@ export function BeardHero() {
         <div className="hero-settle absolute inset-0">
           <MediaImage
             skip="(max-width: 1023.98px)"
-            src="/images/beard/hero.png"
+            src="/images/beard/mens-beard-trim-scissors.png"
             alt={ALT}
             fill
             loading="eager"
@@ -76,7 +76,7 @@ export function BeardHero() {
           <div className="hero-settle absolute inset-0">
             <MediaImage
               skip="(min-width: 1024px)"
-              src="/images/beard/hero.png"
+              src="/images/beard/mens-beard-trim-scissors.png"
               alt={ALT}
               fill
               loading="eager"
@@ -111,6 +111,7 @@ export function BeardHero() {
             <span className="hero-line">
               <span style={d(380)}>A Better You.</span>
             </span>
+            <span className="sr-only"> — Men’s Beard Grooming in KR Puram, Bengaluru</span>
           </h1>
 
           <p className="hero-rise mt-5 text-[18px] font-medium leading-[1.5] text-ink" style={d(520)}>

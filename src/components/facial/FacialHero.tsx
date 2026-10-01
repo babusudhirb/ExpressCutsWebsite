@@ -133,6 +133,7 @@ export function FacialHero() {
                   <em className="font-medium text-champagne-soft">Better Presence.</em>
                 </span>
               </span>
+              <span className="sr-only"> — Men’s Facial in KR Puram, Bengaluru</span>
             </h1>
 
             <p className="hero-rise mt-6 max-w-[44ch] text-[16.5px] leading-[1.6] text-ivory-soft sm:text-[18px]" style={d(480)}>

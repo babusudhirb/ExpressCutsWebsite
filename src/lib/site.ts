@@ -8,7 +8,7 @@ export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL,
   name: "Express Cuts Men's Salon",
   shortName: "Express Cuts",
-  established: 2020,
+  established: 2021,
   phone: "8970000135",
   phoneDisplay: "+91 89700 00135",
   whatsappUrl: "https://wa.me/918970000135",
@@ -20,6 +20,14 @@ export const SITE = {
   ],
   landmark: "2 KM from Hoodi Circle",
   neighbourhood: "Ayyappa Nagar, KR Puram",
+  /* Read off the salon's own Google listing (maps.app.goo.gl/vHPC961Ncd1EBFVN6) */
+  geo: { latitude: 13.0043521, longitude: 77.7092607 },
+  priceRange: "₹₹",
+  /* Profiles that are verifiably the salon's own */
+  sameAs: [
+    "https://maps.app.goo.gl/vHPC961Ncd1EBFVN6",
+    "https://www.instagram.com/expresscuts.salons",
+  ],
   /* Keyless embed of the same place the short maps link opens */
   mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(
     "Express Cuts Men's Salon, 25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout, Krishnarajapuram, Bengaluru, Karnataka 560037",

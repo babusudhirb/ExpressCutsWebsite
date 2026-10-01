@@ -14,7 +14,7 @@ export function HairCTA() {
       className="on-dark relative isolate overflow-hidden bg-night text-ivory"
     >
       <Image
-        src="/images/hair/hero.png"
+        src="/images/hair/mens-haircut-styling-session.png"
         alt=""
         aria-hidden
         fill

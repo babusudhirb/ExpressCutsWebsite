@@ -18,7 +18,7 @@ const TRUST = [
   { icon: CalendarDays, top: `Established`, sub: String(SITE.established) },
   { icon: Star, top: GOOGLE_RATING.value.toFixed(1), sub: "Google Rating" },
   { icon: Users, top: `${GOOGLE_RATING.count}+`, sub: "Google Reviews" },
-  { icon: Scissors, top: "Men's Grooming", sub: "Since 2020" },
+  { icon: Scissors, top: "Men's Grooming", sub: "Since 2021" },
   { icon: MapPin, top: "KR Puram", sub: "Bengaluru" },
 ];
 

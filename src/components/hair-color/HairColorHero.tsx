@@ -79,6 +79,7 @@ export function HairColorHero() {
                 Color. Define. <em className="font-medium text-champagne">Transform.</em>
               </span>
             </span>
+            <span className="sr-only"> — Men’s Hair Color in KR Puram, Bengaluru</span>
           </h1>
 
           <p className="hero-rise mt-4 text-[16px] leading-snug text-ink-soft sm:text-[18px]" style={d(440)}>

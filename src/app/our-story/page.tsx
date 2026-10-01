@@ -9,12 +9,11 @@ import { HygieneProducts, SalonGallery } from "@/components/our-story/HygienePro
 import { OffersStrip, StoryCTA, StoryFaq, StoryLocation, StoryReviews } from "@/components/our-story/StoryClose";
 import { STORY_FAQS, STORY_HERO } from "@/data/our-story";
 import { faqPlainText } from "@/data/beard";
-import { GOOGLE_REVIEWS_URL } from "@/data/reviews";
-import { HOURS, SITE } from "@/lib/site";
+import { abs, breadcrumbs, businessRef, faqSchema } from "@/lib/schema";
 
-const TITLE = "About Express Cuts | Men's Salon in KR Puram Since 2020";
+const TITLE = "About Express Cuts | Men's Salon in KR Puram Since 2021";
 const DESCRIPTION =
-  "Express Cuts is a men's salon in Ayyappa Nagar, KR Puram, Bengaluru, since 2020. Haircuts, beard grooming, facials, hair spa, hair color and complete men's grooming.";
+  "Express Cuts is a men's salon in Ayyappa Nagar, KR Puram, Bengaluru, open since 2021 — haircuts, beard grooming, facials, hair spa and colour.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -30,70 +29,34 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [STORY_HERO.src] },
 };
 
-/** Minutes from midnight → "08:00" for schema.org opening hours */
-const hhmm = (mins: number) => `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(mins % 60).padStart(2, "0")}`;
-
-const SALON = {
-  "@type": "HairSalon",
-  "@id": "#express-cuts-kr-puram",
-  name: `${SITE.name} - KR Puram`,
-  telephone: "+91-8970000135",
-  foundingDate: String(SITE.established),
-  priceRange: "₹₹",
-  image: STORY_HERO.src,
-  hasMap: SITE.mapsUrl,
-  sameAs: [SITE.mapsUrl, GOOGLE_REVIEWS_URL],
-  areaServed: ["KR Puram", "Krishnarajapuram", "Ayyappa Nagar", "Hoodi", "Bengaluru"],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout",
-    addressLocality: "Krishnarajapuram, Bengaluru",
-    addressRegion: "Karnataka",
-    postalCode: "560037",
-    addressCountry: "IN",
+/* AboutPage + the four visible questions, pointing at the salon described once
+   in the root layout. No review or aggregateRating markup. */
+const SCHEMA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: TITLE,
+    description: DESCRIPTION,
+    url: abs("/our-story"),
+    about: businessRef,
+    primaryImageOfPage: abs(STORY_HERO.src),
   },
-  geo: { "@type": "GeoCoordinates", latitude: 12.9986, longitude: 77.6969 },
-  openingHoursSpecification: HOURS.map((h) => ({
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: h.days.map((d) => ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][d]),
-    opens: hhmm(h.open),
-    closes: hhmm(h.close),
-  })),
-};
-
-/* AboutPage + the salon itself + the four visible questions. No review or
-   aggregateRating markup: the page shows real reviews but does not mark them up. */
-const SCHEMA = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      name: TITLE,
-      description: DESCRIPTION,
-      about: { "@id": "#express-cuts-kr-puram" },
-      primaryImageOfPage: STORY_HERO.src,
-    },
-    SALON,
-    {
-      "@type": "FAQPage",
-      mainEntity: STORY_FAQS.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faqPlainText(faq) },
-      })),
-    },
-  ],
-};
+  faqSchema(STORY_FAQS.map((faq) => ({ q: faq.q, a: faqPlainText(faq) }))),
+  breadcrumbs([{ name: "Our Story", path: "/our-story" }]),
+];
 
 export default function OurStoryPage() {
   return (
     <>
       <Navbar />
       <main id="main">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA).replace(/</g, "\\u003c") }}
-        />
+        {SCHEMA.map((block, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(block).replace(/</g, "\u003c") }}
+          />
+        ))}
         <StoryHero />
         <StoryStart />
         <ProofStrip />

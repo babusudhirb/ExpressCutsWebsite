@@ -21,6 +21,11 @@ const d = (ms: number) => ({ "--d": ms }) as React.CSSProperties;
 export function Hero() {
   return (
     <section id="hero" aria-labelledby="hero-title" className="hero relative isolate overflow-hidden bg-hero">
+      {/* The page's one heading. The two hero compositions below draw it at their
+          own size — as paragraphs, so the document keeps a single h1. */}
+      <h1 id="hero-title" className="sr-only">
+        A Better You Everyday — Express Cuts Men&rsquo;s Salon in KR Puram, Bengaluru
+      </h1>
       {/* ≥1024px: the approved desktop composition (display: contents keeps its layout identical) */}
       <div className="hidden lg:contents">
       {/* The photograph is the whole screen; the copy sits on its cream field */}
@@ -48,8 +53,8 @@ export function Hero() {
             Grooming beyond ordinary
           </p>
 
-          <h1
-            id="hero-title"
+          <p
+            aria-hidden
             className="mt-5 font-display text-[clamp(3.1rem,6.2vw,5.5rem)] font-semibold leading-[0.98] tracking-[-0.025em] lg:mt-6"
           >
             <span className="hero-line">
@@ -60,7 +65,7 @@ export function Hero() {
                 You <em className="font-medium text-champagne">Everyday</em>
               </span>
             </span>
-          </h1>
+          </p>
 
           <p className="hero-rise mt-5 text-[18px] leading-[1.55] text-ink-soft" style={d(520)}>
             Hair. Beard. Skin. Style.

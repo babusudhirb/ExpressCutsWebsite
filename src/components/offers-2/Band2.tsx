@@ -53,7 +53,16 @@ export function Band2({ section }: { section: Section2 }) {
             viewport={{ once: true, amount: 0.25 }}
             variants={relay}
           >
-            <KingsCard2 offer={section.offers[0]} />
+            {/* The King's Ritual has its own wide card, unless its artwork is
+                supplied — a tall card on a one-card band is capped by the stage
+                so the whole of it still fits the screen */}
+            {section.offers[0].poster ? (
+              <div className="mx-auto w-full max-w-[min(100%,calc((var(--stage)-5rem)/1.5))]">
+                <Card2 offer={section.offers[0]} sizes="(min-width: 1024px) 460px, 88vw" />
+              </div>
+            ) : (
+              <KingsCard2 offer={section.offers[0]} />
+            )}
           </motion.div>
         ) : (
           <ul aria-label={`${section.title} offers`} className="grid gap-5 sm:grid-cols-2">

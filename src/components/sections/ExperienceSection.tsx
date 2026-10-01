@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { SalonRotator } from "@/components/ui/SalonPhotos";
 
 const FACTS = [
-  { value: "2020", label: "Serving KR Puram since" },
+  { value: "2021", label: "Serving KR Puram since" },
   { value: "7 Days", label: "Open every day of the week" },
   { value: "2 KM", label: "From Hoodi Circle" },
 ];

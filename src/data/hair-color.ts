@@ -9,7 +9,7 @@ import { OFFERS } from "./offers";
 
 export const HAIR_COLOR_HERO = {
   /* Head-and-shoulders crop of the supplied grey-coverage photograph */
-  src: "/images/hair-color/hero.jpg",
+  src: "/images/hair-color/mens-silver-grey-hair-colour.jpg",
   width: 736,
   height: 720,
   alt: "Men's hair colour at Express Cuts Men's Salon, KR Puram — client with silver-grey coloured hair",

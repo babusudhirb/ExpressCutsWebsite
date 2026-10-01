@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { HAIR_GUIDE_HREF, HAIR_GUIDE_TOPICS } from "@/data/hair";
-import { Arrow, Eyebrow, btn } from "@/components/ui/button";
+import { HAIR_GUIDE_TOPICS } from "@/data/hair";
+import { Eyebrow } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/Reveal";
 import { WaBtn2 } from "@/components/offer-card/actions";
 import { waLink } from "@/lib/site";
@@ -13,18 +12,19 @@ export function StyleHelp() {
       <div className="shell grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         {/* Try a New Style */}
         <Reveal variant="clip">
-          <article className="on-dark relative flex min-h-[330px] overflow-hidden rounded-[18px] bg-charcoal text-ivory">
-            <div className="relative w-[38%] shrink-0 overflow-hidden sm:w-[36%]">
+          <article className="on-dark relative flex min-h-[330px] flex-col overflow-hidden rounded-[18px] bg-charcoal text-ivory sm:flex-row">
+            <div className="relative h-[200px] w-full shrink-0 overflow-hidden sm:h-auto sm:w-[36%]">
               <Image
                 src="/images/offers/platinum.png"
                 alt="Client in the chair after a fresh cut and style"
                 fill
-                sizes="(min-width: 1024px) 300px, 38vw"
+                sizes="(min-width: 1024px) 300px, (min-width: 640px) 38vw, 100vw"
                 className="object-cover object-[54%_26%]"
               />
+              {/* The photograph dissolves into the card: downwards when stacked, sideways beside the copy */}
               <div
                 aria-hidden
-                className="absolute inset-y-0 right-0 w-2/5 bg-gradient-to-r from-charcoal/0 to-charcoal"
+                className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-b from-charcoal/0 to-charcoal sm:inset-y-0 sm:left-auto sm:right-0 sm:h-auto sm:w-2/5 sm:bg-gradient-to-r"
               />
             </div>
 
@@ -44,6 +44,8 @@ export function StyleHelp() {
               <div className="mt-7">
                 <WaBtn2
                   size="md"
+                  /* The label is long: on a narrow card it wraps instead of overflowing */
+                  className="max-sm:h-auto max-sm:w-full max-sm:whitespace-normal max-sm:py-3 max-sm:text-center max-sm:leading-tight"
                   label="Get a Style Recommendation"
                   context="about which haircut would suit me"
                   href={waLink("Hi, I'd like a haircut recommendation for my hair type.")}
@@ -67,7 +69,7 @@ export function StyleHelp() {
               Find the right cut, learn how to maintain it, and get styling tips from our experts.
             </p>
 
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-6 flex flex-wrap gap-2 xl:pr-[168px]">
               {HAIR_GUIDE_TOPICS.map((topic) => (
                 <li
                   key={topic}
@@ -77,12 +79,6 @@ export function StyleHelp() {
                 </li>
               ))}
             </ul>
-
-            <div className="mt-7">
-              <Link href={HAIR_GUIDE_HREF} prefetch={false} className={btn("outline", "md")}>
-                Read the Hair Guide <Arrow />
-              </Link>
-            </div>
 
             {/* Reference's inset portrait and script mark, on wide cards only */}
             <div aria-hidden className="pointer-events-none absolute bottom-6 right-6 hidden w-[132px] xl:block">

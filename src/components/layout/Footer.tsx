@@ -93,7 +93,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-ivory/10 pt-6 text-[12.5px] text-ivory-muted sm:flex-row sm:justify-between">
           <p>© {year} Express Cuts Men&rsquo;s Salon. All rights reserved.</p>
-          <p>Est. 2020 · KR Puram, Bengaluru</p>
+          <p>Est. 2021 · KR Puram, Bengaluru</p>
         </div>
       </div>
     </footer>

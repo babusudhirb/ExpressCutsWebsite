@@ -31,7 +31,10 @@ export function HeroMobile() {
             Grooming beyond ordinary
           </p>
 
-          <h1 className="mt-3 font-display text-[clamp(2.75rem,12vw,3.5rem)] font-semibold leading-[0.98] tracking-[-0.025em]">
+          <p
+            aria-hidden
+            className="mt-3 font-display text-[clamp(2.75rem,12vw,3.5rem)] font-semibold leading-[0.98] tracking-[-0.025em]"
+          >
             <span className="hero-line">
               <span style={d(160)}>A Better</span>
             </span>
@@ -40,7 +43,7 @@ export function HeroMobile() {
                 You <em className="font-medium text-champagne">Everyday.</em>
               </span>
             </span>
-          </h1>
+          </p>
 
           <p className="hero-rise mt-3 text-[17px] leading-[1.45] text-ink-soft" style={d(420)}>
             Men&rsquo;s haircuts, beard &amp; grooming

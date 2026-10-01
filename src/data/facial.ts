@@ -42,22 +42,22 @@ const WHOLE = { visible: 1, top: 0, aspect: 866 / 463 };
 
 export const FACIAL_OFFERS: FacialOffer[] = [
   facial("signature", "01", "Type 1 Facial", {
-    src: "/images/facial/type-1.webp",
+    src: "/images/facial/mens-facial-type-1.webp",
     alt: "Client relaxing while a facial cleansing brush is used on his forehead",
     focus: { position: "50% 50%", zoomOut: WHOLE },
   }),
   facial("deluxe", "02", "Type 2 Facial", {
-    src: "/images/facial/type-2.webp",
+    src: "/images/facial/mens-facial-type-2.webp",
     alt: "Therapist using a skin scrubber device on a bearded client's cheek",
     focus: { position: "50% 50%", zoomOut: { ...WHOLE, aspect: 1733 / 926 } },
   }),
   facial("executive", "03", "Type 3 Facial", {
-    src: "/images/facial/type-3.webp",
+    src: "/images/facial/mens-facial-type-3.webp",
     alt: "Face mask being brushed onto a client lying on a towel",
     focus: { position: "50% 50%", zoomOut: WHOLE },
   }),
   facial("platinum", "04", "Type 4 Facial", {
-    src: "/images/facial/type-4.webp",
+    src: "/images/facial/mens-facial-type-4.webp",
     alt: "Therapist brushing a cream mask onto a relaxed client's face",
     focus: { position: "50% 50%", zoomOut: { ...WHOLE, aspect: 867 / 463 } },
   }),

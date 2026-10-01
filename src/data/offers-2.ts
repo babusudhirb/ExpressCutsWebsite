@@ -21,7 +21,26 @@ export type Offer2 = {
   alt: string;
   /** CSS object-position that keeps the face/subject in frame */
   position: string;
+  /** Extra zoom, where object-position alone cannot keep signage out of frame */
+  scale?: number;
+  origin?: string;
+  /**
+   * The finished card artwork, used in place of a built card. `ctaTop`/`ctaBottom`
+   * are where the painted CALL and WHATSAPP buttons sit inside that artwork, as a
+   * share of its height — measured from the files themselves, since the button row
+   * is not at the same height in every design.
+   */
+  poster?: { src: string; ctaTop: number; ctaBottom: number };
 };
+
+/** Where the two painted buttons start and end across the artwork's width */
+export const POSTER_CTA_X = { callLeft: 0.036, callRight: 0.499, waLeft: 0.508, waRight: 0.967 };
+
+const poster = (name: string, ctaTop: number, ctaBottom: number) => ({
+  src: `/images/offer-cards/${name}.png`,
+  ctaTop,
+  ctaBottom,
+});
 
 export type Section2 = {
   id: string;
@@ -57,6 +76,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("haircut"),
         alt: "Barber giving a men's haircut at Express Cuts Men's Salon in KR Puram, Bengaluru",
         position: "60% 30%",
+        poster: poster("mens-haircut-offer", 0.825, 0.901),
       },
       {
         id: "beard",
@@ -67,16 +87,19 @@ export const SECTIONS_2: Section2[] = [
         image: img("beard-trim"),
         alt: "Beard trim and line-up for a client at the men's salon near Ayyappa Nagar, KR Puram",
         position: "55% 38%",
+        poster: poster("beard-trim-offer", 0.812, 0.889),
       },
       {
         id: "wash-cut-style",
         name: "Wash, Cut & Style",
         price: 199,
+        wasPrice: 299,
         priceNote: "from",
         includes: ["Hair wash", "Detailed haircut", "Styling"],
         image: img("wash-style"),
         alt: "Relaxing hair wash before a men's haircut at Express Cuts, Krishnarajapuram",
         position: "45% 45%",
+        poster: poster("wash-cut-style-offer", 0.839, 0.916),
       },
     ],
   },
@@ -99,6 +122,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("classic"),
         alt: "Client with a classic men's haircut and trimmed beard in KR Puram",
         position: "50% 32%",
+        poster: poster("classic-combo-offer", 0.846, 0.922),
       },
       {
         id: "premium",
@@ -108,7 +132,13 @@ export const SECTIONS_2: Section2[] = [
         includes: ["Haircut", "Beard trim", "Head massage", "De-tan"],
         image: img("premium"),
         alt: "Barber finishing a fade at the barber shop in KR Puram, Bengaluru",
+        /* The photograph is narrower than the panel's frame, so object-position
+           cannot pan sideways; a little zoom off the left edge is what keeps the
+           wall signage out, as the homepage copy of this picture already does. */
         position: "42% 40%",
+        poster: poster("premium-combo-offer", 0.876, 0.948),
+        scale: 1.24,
+        origin: "0% 40%",
       },
     ],
   },
@@ -129,6 +159,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("signature"),
         alt: "Men's facial being applied during a grooming package in KR Puram",
         position: "50% 42%",
+        poster: poster("signature-combo-offer", 0.854, 0.928),
       },
       {
         id: "deluxe",
@@ -140,6 +171,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("deluxe"),
         alt: "Client during a men's facial at the salon near Ayyappa Nagar, KR Puram",
         position: "50% 45%",
+        poster: poster("deluxe-combo-offer", 0.859, 0.934),
       },
       {
         id: "executive",
@@ -150,6 +182,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("executive"),
         alt: "Hair color for men styled with streaks at Express Cuts, Bengaluru",
         position: "42% 38%",
+        poster: poster("executive-combo-offer", 0.855, 0.926),
       },
       {
         id: "platinum",
@@ -160,6 +193,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("platinum"),
         alt: "Client with L'Oréal hair color for men at the KR Puram salon",
         position: "55% 40%",
+        poster: poster("platinum-combo-offer", 0.853, 0.929),
       },
     ],
   },
@@ -181,6 +215,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("pedi-mani"),
         alt: "Men's pedicure and manicure at Express Cuts Men's Salon, Krishnarajapuram",
         position: "50% 30%",
+        poster: poster("pedi-mani-combo-offer", 0.877, 0.947),
       },
       {
         id: "hydra",
@@ -199,6 +234,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("hydra"),
         alt: "Hydra facial for men in Bengaluru being performed at Express Cuts, KR Puram",
         position: "45% 30%",
+        poster: poster("hydra-facial-offer", 0.863, 0.939),
       },
     ],
   },
@@ -220,6 +256,7 @@ export const SECTIONS_2: Section2[] = [
         image: img("kings"),
         alt: "Client enjoying the full King's Ritual grooming experience at Express Cuts, KR Puram",
         position: "45% 18%",
+        poster: poster("kings-ritual-offer", 0.871, 0.944),
       },
     ],
   },
@@ -229,13 +266,13 @@ export const SECTIONS_2: Section2[] = [
 export const KINGS_CHAIN = ["Hair", "Beard", "Spa", "Skin", "Hands & Feet"];
 
 export const HERO_2 = {
-  src: img("hero"),
+  src: img("mens-silver-grey-hair-colour"),
   width: 736,
   height: 770,
   alt: "Client with freshly styled hair at Express Cuts Men's Salon, Ayyappa Nagar, KR Puram, Bengaluru",
 };
 
-export const CTA_IMAGE_2 = img("cta");
+export const CTA_IMAGE_2 = img("mens-hair-styling-barber");
 
 export const ALL_OFFERS_2 = SECTIONS_2.flatMap((s) => s.offers);
 

@@ -11,17 +11,17 @@ import type { Faq } from "./faq";
 const img = (name: string) => `/images/our-story/${name}.webp`;
 
 export const STORY_HERO = {
-  src: img("hero"),
+  src: img("express-cuts-salon-interior-kr-puram"),
   width: 1448,
   height: 1086,
   alt: "Inside Express Cuts Men's Salon in Ayyappa Nagar, KR Puram — styling chairs, mirrors and the reception desk",
 };
 
 export const STORY_BODY =
-  "Express Cuts Men's Salon was established in 2020 with a simple idea: men's grooming should be professional, approachable and easy to make part of everyday life. From a fresh haircut and beard trim to facial treatments, hair spa, hair color and complete grooming, Express Cuts brings multiple grooming services together under one roof in KR Puram, Bengaluru.";
+  "Express Cuts Men's Salon was established in 2021 with a simple idea: men's grooming should be professional, approachable and easy to make part of everyday life. From a fresh haircut and beard trim to facial treatments, hair spa, hair color and complete grooming, Express Cuts brings multiple grooming services together under one roof in KR Puram, Bengaluru.";
 
 export const STORY_IMAGE = {
-  src: img("story"),
+  src: img("express-cuts-salon-styling-stations-kr-puram"),
   width: 900,
   height: 664,
   alt: "Styling stations and mirrors at Express Cuts men's salon in Krishnarajapuram, Bengaluru",
@@ -29,12 +29,12 @@ export const STORY_IMAGE = {
 
 /** Owner-supplied milestones only — nothing else is invented */
 export const JOURNEY = [
-  { year: "2020", lines: ["Established in Ayyappa Nagar, KR Puram"] },
+  { year: "2021", lines: ["Established in Ayyappa Nagar, KR Puram"] },
   { year: "Today", lines: ["10,000+ Men Served", "990+ Google Reviews"] },
 ];
 
 export const PROOF = [
-  { value: "2020", label: "Established" },
+  { value: "2021", label: "Established" },
   { value: "10,000+", label: "Men Served" },
   { value: "4.7", label: "Google Rating" },
   { value: "990+", label: "Google Reviews" },
@@ -48,7 +48,7 @@ export const STORY_SERVICES = [
     kicker: "Hair",
     title: "Men's Haircuts & Styling",
     href: "/hair",
-    src: img("svc-hair"),
+    src: img("mens-haircut-side-part-styling"),
     alt: "Men's haircut and hair styling at Express Cuts Men's Salon in KR Puram",
     position: "50% 30%",
   },
@@ -57,7 +57,7 @@ export const STORY_SERVICES = [
     kicker: "Beard",
     title: "Men's Beard Grooming",
     href: "/beard",
-    src: img("svc-beard"),
+    src: img("mens-beard-grooming-service"),
     alt: "Men's beard grooming at Express Cuts Salon in KR Puram",
     position: "50% 28%",
   },
@@ -66,7 +66,7 @@ export const STORY_SERVICES = [
     kicker: "Facial",
     title: "Men's Facial & Skin Care",
     href: "/facial",
-    src: img("svc-facial"),
+    src: img("mens-facial-treatment"),
     alt: "Men's facial treatment at Express Cuts Salon in KR Puram",
     position: "50% 42%",
   },
@@ -75,7 +75,7 @@ export const STORY_SERVICES = [
     kicker: "Hair Spa",
     title: "Men's Hair Spa & Hair Treatments",
     href: "/hair-spa",
-    src: img("svc-spa"),
+    src: img("mens-hair-spa-wash"),
     alt: "Men's hair spa and hair treatment at Express Cuts Salon in KR Puram",
     position: "42% 45%",
   },
@@ -84,7 +84,7 @@ export const STORY_SERVICES = [
     kicker: "Hair Color",
     title: "Men's Hair Color & Highlights",
     href: "/hair-color",
-    src: img("svc-color"),
+    src: img("mens-grey-hair-coverage"),
     alt: "Men's hair color service at Express Cuts Salon in KR Puram",
     position: "50% 22%",
   },
@@ -93,8 +93,8 @@ export const STORY_SERVICES = [
     kicker: "Offers",
     title: "Men's Grooming Offers",
     href: "/offers",
-    src: img("svc-offers"),
-    alt: "Grooming package offers for men at Express Cuts Salon in Krishnarajapuram",
+    src: img("mens-haircut-in-progress"),
+    alt: "Men's haircut in progress at Express Cuts Salon in Krishnarajapuram",
     position: "42% 40%",
   },
 ];
@@ -125,31 +125,31 @@ export const BRANDS = ["L'Oréal", "Schwarzkopf", "Streax", "VLCC", "Tenax"];
 /** The five real photographs of the salon (the design reference file is never shipped) */
 export const GALLERY = [
   {
-    src: img("storefront"),
+    src: img("express-cuts-salon-exterior-kr-puram"),
     alt: "Express Cuts Men's Salon storefront lit up at night on Ayyappa Nagar Main Rd, KR Puram",
     width: 900,
     height: 405,
   },
   {
-    src: img("reception"),
+    src: img("express-cuts-salon-reception-ayyappa-nagar"),
     alt: "Reception desk inside Express Cuts Men's Salon in Krishnarajapuram, Bengaluru",
     width: 900,
     height: 1080,
   },
   {
-    src: img("floor"),
+    src: img("express-cuts-salon-styling-floor-kr-puram"),
     alt: "Styling chairs and product shelves on the salon floor at Express Cuts, KR Puram",
     width: 900,
     height: 675,
   },
   {
-    src: img("wash-area"),
+    src: img("express-cuts-salon-wash-area-kr-puram"),
     alt: "Hair wash station and grooming area at Express Cuts men's salon near Hoodi",
     width: 900,
     height: 675,
   },
   {
-    src: img("story"),
+    src: img("express-cuts-salon-styling-stations-kr-puram"),
     alt: "Row of mirrors and grooming stations at Express Cuts Men's Salon, Bengaluru",
     width: 900,
     height: 664,

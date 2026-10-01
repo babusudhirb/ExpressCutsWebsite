@@ -8,7 +8,7 @@ import type { Faq } from "./faq";
  */
 
 export const HAIR_SPA_HERO = {
-  src: "/images/hair-spa/hero.png",
+  src: "/images/hair-spa/mens-hair-spa-treatment.png",
   width: 1536,
   height: 1024,
   alt: "Men's hair spa treatment at Express Cuts Men's Salon, KR Puram — scalp being lathered and massaged at the wash basin",

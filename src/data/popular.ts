@@ -1,4 +1,5 @@
 import type { ImageFocus } from "./offers";
+import { ALL_OFFERS_2 } from "./offers-2";
 
 /**
  * Popular services — names, prices and copy exactly as supplied by the salon owner.
@@ -52,7 +53,7 @@ export const POPULAR_SERVICES: PopularService[] = [
       "The full package. Includes a relaxing wash, detailed cut, and professional styling.",
       "The ultimate men’s grooming experience in KR Puram.",
     ],
-    price: { offer: 199, from: true },
+    price: { offer: 199, actual: 299, from: true },
     icon: "shower",
     image: "/images/services/hair-spa.png",
     alt: "Client relaxing at the wash basin during a hair wash",
@@ -65,8 +66,9 @@ export const HAIRCUT_FROM = POPULAR_SERVICES[0].price.offer;
 
 /**
  * The same three services, shaped for the shared offer card (see
- * components/offer-card). Nothing is added here: no savings — the brief
- * publishes none for these — and no inclusions, only the copy above.
+ * components/offer-card). Nothing is added here: no inclusions, only the copy
+ * above — and the finished artwork, looked up by id from the offers it shares
+ * its name with, so this section and /offers can only ever show the same card.
  */
 export const SERVICE_CARDS = POPULAR_SERVICES.map((s) => ({
   id: s.id,
@@ -78,4 +80,5 @@ export const SERVICE_CARDS = POPULAR_SERVICES.map((s) => ({
   image: s.image,
   alt: s.alt,
   position: s.focus.position,
+  poster: ALL_OFFERS_2.find((o) => o.id === s.id)?.poster,
 }));

@@ -8,7 +8,7 @@ import { HairColorLooks } from "@/components/hair-color/HairColorLooks";
 import { HairColorProcess } from "@/components/hair-color/HairColorProcess";
 import { HairColorPackages } from "@/components/hair-color/HairColorPackages";
 import { HAIR_COLOR_HERO } from "@/data/hair-color";
-import { HOURS, SITE } from "@/lib/site";
+import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
 const TITLE = "Men's Hair Color in KR Puram, Bengaluru | Express Cuts";
 const DESCRIPTION =
@@ -29,48 +29,31 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [OG_IMAGE.url] },
 };
 
-/** Minutes from midnight → "08:00" for schema.org opening hours */
-const hhmm = (mins: number) => `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(mins % 60).padStart(2, "0")}`;
 
-/* Hair colour as a service of the salon described site-wide in the root layout */
-const SERVICE_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Men's Hair Color",
-  serviceType: "Men's hair colour, highlights, streaks and grey coverage",
-  areaServed: "KR Puram, Krishnarajapuram, Bengaluru",
-  provider: {
-    "@type": "HairSalon",
-    name: `${SITE.name} – KR Puram`,
-    telephone: "+91-8970000135",
-    hasMap: SITE.mapsUrl,
-    foundingDate: String(SITE.established),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout",
-      addressLocality: "Krishnarajapuram, Bengaluru",
-      addressRegion: "Karnataka",
-      postalCode: "560037",
-      addressCountry: "IN",
-    },
-    openingHoursSpecification: HOURS.map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.days.map((d) => ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][d]),
-      opens: hhmm(h.open),
-      closes: hhmm(h.close),
-    })),
-  },
-};
+/* The salon is described once, site-wide; these point at it */
+const SCHEMA = [
+  serviceSchema({
+    name: "Men's Hair Color",
+    serviceType: "Men's hair colour, highlights, streaks and grey coverage",
+    description:
+      "Men's hair colour, grey coverage, streaks and highlights at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru.",
+    path: "/hair-color",
+  }),
+  breadcrumbs([{ name: "Men's Hair Color", path: "/hair-color" }]),
+];
 
 export default function HairColorPage() {
   return (
     <>
       <Navbar />
       <main id="main">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA).replace(/</g, "\\u003c") }}
-        />
+        {SCHEMA.map((block, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(block).replace(/</g, "\u003c") }}
+          />
+        ))}
         <HairColorHero />
         <HairColorFind />
         <HairColorLooks />

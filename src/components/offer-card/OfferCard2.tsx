@@ -1,24 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { motion, type Variants } from "motion/react";
+import { motion } from "motion/react";
 import { Check } from "lucide-react";
 import { inr2, priceLabel2, waFor2, type Offer2 } from "@/data/offers-2";
 import { cn } from "@/lib/cn";
 import { CallBtn2, WaBtn2 } from "./actions";
+import { PanelCard2, isPanelOffer } from "./PanelCard2";
+import { PosterCard2 } from "./PosterCard2";
+import { card2Variants, rise, settle } from "./motion";
 
-const EASE = [0.22, 1, 0.36, 1] as const;
-
-/* Same entrance order as Offer Page 1: card lands, photo settles, then name, price, list, CTAs */
-export const card2Variants: Variants = {
-  hidden: { opacity: 0.001, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE, staggerChildren: 0.09, delayChildren: 0.06 } },
-};
-export const settle: Variants = { hidden: { scale: 1.1 }, show: { scale: 1, transition: { duration: 1.4, ease: EASE } } };
-export const rise: Variants = {
-  hidden: { opacity: 0.001, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-};
+/* The entrance lives in ./motion so every card variant shares one definition */
+export { card2Variants, rise, settle } from "./motion";
 
 /**
  * An offer card's content: Offer Page 2's data, plus what a host page adds —
@@ -140,6 +133,15 @@ export function OfferCard2({
   /** Off where no saving is published (the homepage services) */
   showSaving?: boolean;
 }) {
+  /* An offer whose card is finished artwork is drawn from that file — see
+     ./PosterCard2. Keyed off the record, not the id, so the services section
+     (whose ids are the same three words) keeps its built cards. */
+  if (offer.poster) return <PosterCard2 offer={offer} sizes={sizes} />;
+
+  /* Classic and Premium are art-directed as full panels — see ./PanelCard2.
+     Dispatching here is what keeps the homepage and the offers page identical. */
+  if (isPanelOffer(offer.id)) return <PanelCard2 offer={offer} sizes={sizes} mediaCap={mediaCap} />;
+
   return (
     <motion.article
       variants={card2Variants}

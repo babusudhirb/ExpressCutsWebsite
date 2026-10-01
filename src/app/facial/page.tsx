@@ -9,6 +9,7 @@ import { FacialEditorial } from "@/components/facial/FacialEditorial";
 import { FacialGuide, FacialVisitFaq } from "@/components/facial/FacialInfo";
 import { FacialReviews } from "@/components/facial/FacialReviews";
 import { FacialCTA } from "@/components/facial/FacialCTA";
+import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
 const TITLE = "Men’s Facial in KR Puram | Express Cuts Men’s Salon";
 const DESCRIPTION =
@@ -17,9 +18,13 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
+  alternates: { canonical: "/facial" },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
+    url: "/facial",
+    type: "website",
     images: [
       {
         url: "/images/services/facial-treatment.png",
@@ -31,11 +36,30 @@ export const metadata: Metadata = {
   },
 };
 
+/* This page's service, tied to the salon described once in the root layout */
+const SCHEMA = [
+  serviceSchema({
+    name: "Men's Facial",
+    serviceType: "Facials and skin treatments for men",
+    description:
+      "Men's facials at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru, including Type 1 to Type 4 facials and the Hydra Facial.",
+    path: "/facial",
+  }),
+  breadcrumbs([{ name: "Men's Facial", path: "/facial" }]),
+];
+
 export default function FacialPage() {
   return (
     <>
       <Navbar />
       <main id="main">
+        {SCHEMA.map((block, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(block).replace(/</g, "\u003c") }}
+          />
+        ))}
         <FacialHero />
         {/* StickyCTA hooks: #services ends the phone bar's window; the zone hides the desktop pair while pinned */}
         <div id="services" data-offers-zone>

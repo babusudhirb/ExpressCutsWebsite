@@ -3,6 +3,7 @@ import { Bodoni_Moda, Inter, Mrs_Saint_Delafield } from "next/font/google";
 import "./globals.css";
 import { MotionPrefs } from "@/components/motion/MotionPrefs";
 import { SITE } from "@/lib/site";
+import { siteSchema } from "@/lib/schema";
 
 const display = Bodoni_Moda({
   subsets: ["latin"],
@@ -26,57 +27,35 @@ const signature = Mrs_Saint_Delafield({
 });
 
 const description =
-  "Hair cuts, beard grooming, facials, hair spa, keratin and grooming packages at value-based pricing. Ayyappa Nagar, KR Puram, Bengaluru — 2 KM from Hoodi Circle. Call 8970000135.";
+  "Men's salon in Ayyappa Nagar, KR Puram, Bengaluru: haircuts from ₹99, beard grooming, facials, hair spa and hair colour. Walk-ins welcome, open 7 days.";
 
 export const metadata: Metadata = {
   ...(SITE.url ? { metadataBase: new URL(SITE.url) } : {}),
   title: {
-    default: "Express Cuts Men's Salon · KR Puram, Bengaluru",
+    default: "Men's Salon in KR Puram, Bengaluru | Express Cuts",
     template: "%s · Express Cuts Men's Salon",
   },
   description,
   openGraph: {
-    title: "Express Cuts Men's Salon · KR Puram",
+    title: "Men's Salon in KR Puram, Bengaluru | Express Cuts",
+    url: "/",
     description,
     type: "website",
     locale: "en_IN",
-    images: [{ url: "/images/hero/hero.png", width: 1536, height: 1024 }],
+    images: [
+      {
+        url: "/images/hero/home-hero.webp",
+        width: 1733,
+        height: 908,
+        alt: "Inside Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru",
+      },
+    ],
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
   themeColor: "#f7f3ee",
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  name: SITE.name,
-  telephone: "+91-8970000135",
-  foundingDate: String(SITE.established),
-  hasMap: SITE.mapsUrl,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout",
-    addressLocality: "Krishnarajapuram, Bengaluru",
-    addressRegion: "Karnataka",
-    postalCode: "560037",
-    addressCountry: "IN",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "22:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "07:00",
-      closes: "22:00",
-    },
-  ],
 };
 
 const DIRECTION_CONTRACT = `<!--
@@ -101,7 +80,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema()) }}
         />
         <MotionPrefs>
           {children}

@@ -27,8 +27,9 @@ type Photo = { offer: string; position: string; scale?: number; origin?: string 
 const PHOTOS: Record<string, Photo> = {
   classic: { offer: "classic", position: "50% 32%" },
   /* The wider homepage frames of these two are zoomed to the same window the
-     offers page shows, which also keeps the wall signage out */
-  premium: { offer: "premium", position: "0% 39%", scale: 1.19, origin: "0% 39%" },
+     offers page shows, which also keeps the wall signage out. Premium's panel
+     crop is wider than the old 4:3 one, so it needs more zoom to do the same. */
+  premium: { offer: "premium", position: "0% 39%", scale: 1.46, origin: "0% 39%" },
   signature: { offer: "signature", position: "50% 42%" },
   deluxe: { offer: "deluxe", position: "50% 45%" },
   executive: { offer: "executive", position: "42% 38%" },

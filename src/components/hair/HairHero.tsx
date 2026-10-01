@@ -33,7 +33,7 @@ export function HairHero() {
           <MediaImage
             /* Below 1024px the browser picks a blank source: phones never fetch this crop */
             skip="(max-width: 1023.98px)"
-            src="/images/hair/hero.png"
+            src="/images/hair/mens-haircut-styling-session.png"
             alt={ALT}
             fill
             loading="eager"
@@ -71,7 +71,7 @@ export function HairHero() {
           <div className="hero-settle absolute inset-0">
             <MediaImage
               skip="(min-width: 1024px)"
-              src="/images/hair/hero.png"
+              src="/images/hair/mens-haircut-styling-session.png"
               alt={ALT}
               fill
               loading="eager"
@@ -109,6 +109,7 @@ export function HairHero() {
                 a <em className="font-medium text-champagne">Haircut.</em>
               </span>
             </span>
+            <span className="sr-only"> — Men’s Haircut in KR Puram, Bengaluru</span>
           </h1>
 
           <p className="hero-rise mt-5 text-[18px] font-medium leading-[1.5] text-ink" style={d(520)}>

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { BEARD_GUIDE_HREF, CARE_TIPS } from "@/data/beard";
-import { Arrow, Eyebrow, btn } from "@/components/ui/button";
+import { CARE_TIPS } from "@/data/beard";
+import { Eyebrow } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/Reveal";
 
 /** Care habits beside a close-up of the tools at work — the salon's own photograph. */
@@ -46,12 +45,6 @@ export function BeardCare() {
               </li>
             ))}
           </ol>
-
-          <div className="mt-9">
-            <Link href={BEARD_GUIDE_HREF} prefetch={false} className={btn("outline", "md")}>
-              Read the Beard Guide <Arrow />
-            </Link>
-          </div>
         </Reveal>
       </div>
     </section>

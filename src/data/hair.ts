@@ -88,7 +88,7 @@ export const CUT_STYLES: CutStyle[] = [
     number: "08",
     name: "Textured Cut",
     descriptor: "Natural. Modern. Versatile.",
-    image: "/images/cuts/textured.jpg",
+    image: "/images/cuts/mens-textured-haircut.jpg",
     alt: "Textured, swept medium-length haircut with light stubble",
     /* The bottom of the frame keeps the source's corner watermark out of view */
     focus: { position: "50% 100%" },
@@ -132,7 +132,7 @@ export const HAIR_TYPES: HairType[] = [
     name: "Straight",
     lines: ["Easy to manage.", "Needs neat, structured cuts."],
     image: "/images/hair/cuts/classic-side-part.png",
-    alt: "Close crop of straight, combed hair",
+    alt: "Man with straight hair in a combed classic side part",
     focus: { position: "50% 12%" },
   },
   {
@@ -140,7 +140,7 @@ export const HAIR_TYPES: HairType[] = [
     name: "Wavy",
     lines: ["Natural volume.", "Works well with textured styles."],
     image: "/images/hair/cuts/messy-quiff.webp",
-    alt: "Close crop of loose, wavy hair",
+    alt: "Man with wavy hair styled into a textured quiff",
     focus: { position: "50% 10%" },
   },
   {
@@ -148,7 +148,7 @@ export const HAIR_TYPES: HairType[] = [
     name: "Curly",
     lines: ["Fuller look.", "Needs shape and definition."],
     image: "/images/hair/cuts/buzz-fade.webp",
-    alt: "Close crop of tight, curly hair",
+    alt: "Man with curly hair kept short with a faded back and sides",
     focus: { position: "52% 8%" },
   },
   {
@@ -156,7 +156,7 @@ export const HAIR_TYPES: HairType[] = [
     name: "Thick",
     lines: ["Adds natural volume.", "Works with structured styles."],
     image: "/images/hair/cuts/mid-taper-fade.webp",
-    alt: "Close crop of thick, dense hair",
+    alt: "Man with thick hair shaped into a mid taper fade",
     focus: { position: "45% 12%" },
   },
   {
@@ -164,7 +164,7 @@ export const HAIR_TYPES: HairType[] = [
     name: "Thin",
     lines: ["Lightweight styles.", "Works well with smart layering."],
     image: "/images/hair/cuts/low-taper-fade.webp",
-    alt: "Close crop of fine, lightweight hair",
+    alt: "Man with fine hair cut into a low taper fade",
     focus: { position: "50% 10%" },
   },
 ];
