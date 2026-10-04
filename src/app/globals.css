@@ -5,7 +5,7 @@
 @theme {
   --color-ivory: #f7f3ee;
   --color-hero: #fbf8f5; /* sampled from the hero photograph's cream field */
-  --color-hero-mobile: #f7f1e8; /* sampled from the mobile hero photograph's curved cream top */
+  --color-hero-mobile: #fef9f1; /* sampled from the mobile hero photograph's painted cream wave */
   --color-cream: #efe8de;
   --color-paper: #ffffff;
   --color-ink: #121110;
@@ -61,6 +61,13 @@
     color: var(--color-ink);
     scrollbar-color: #cdbfab var(--color-ivory);
     -webkit-tap-highlight-color: transparent;
+  }
+  /* Native smooth scrolling for anchor links. The offers page opts out: a smooth
+     jump from its tab bar would travel through the stepped offer bands on phones. */
+  @media (prefers-reduced-motion: no-preference) {
+    html:not(:has([data-instant-anchors])) {
+      scroll-behavior: smooth;
+    }
   }
   body {
     font-family: var(--font-sans);

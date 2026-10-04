@@ -233,7 +233,7 @@ function Pinned({ section, perView }: { section: Section2; perView: number }) {
     const cardW = (offsets[1] ?? vw) - (offsets[0] ?? 0) || vw;
     if (left >= -1 && left + cardW <= vw + 1) return;
     const top = zone.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: top + Math.min(1, Math.max(0, offset / overflow)) * (zone.offsetHeight - window.innerHeight) });
+    window.scrollTo({ top: top + Math.min(1, Math.max(0, offset / overflow)) * (zone.offsetHeight - window.innerHeight), behavior: "instant" });
   };
 
   return (

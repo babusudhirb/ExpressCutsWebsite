@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from "motion/react";
 import type { Offer2, Section2 } from "@/data/offers-2";
+import { useStepScroll } from "@/hooks/useStepScroll";
 import { Card2 } from "./Card2";
 
 /** Page scroll spent on one card: it rests for most of the step, then hands over */
@@ -25,6 +26,9 @@ export function MobileBand2({ section, reduce }: { section: Section2; reduce: bo
   const dark = section.tone === "dark";
   const zoneRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
+
+  /* One gesture = one card: the page may only rest on a card's own position */
+  useStepScroll(zoneRef, n, !reduce);
 
   const { scrollYProgress } = useScroll({ target: zoneRef, offset: ["start start", "end end"] });
   /* 0 → n−1 across the zone: one whole number per card */
@@ -56,7 +60,7 @@ export function MobileBand2({ section, reduce }: { section: Section2; reduce: bo
     <section id={section.id} aria-labelledby={`${section.id}-title`} style={{ scrollMarginTop: TOP }} className={bg}>
       <Intro section={section} />
 
-      {/* Each card owns ~75svh of scroll, so one flick moves exactly one card */}
+      {/* Each card owns ~75svh of scroll; useStepScroll spends it one card per gesture */}
       <div ref={zoneRef} className="relative" style={{ height: `calc(100svh + ${(n - 1) * STEP_SVH}svh)` }}>
         <div
           className="sticky flex flex-col"

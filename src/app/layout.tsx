@@ -71,6 +71,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-IN"
+      /* Anchor links scroll smoothly (globals.css); route changes still land at the top at once */
+      data-scroll-behavior="smooth"
       className={`${display.variable} ${sans.variable} ${signature.variable}`}
     >
       <body>

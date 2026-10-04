@@ -67,6 +67,7 @@ export function TabBar2() {
         <nav
           ref={navRef}
           aria-label="Offer categories"
+          data-instant-anchors
           className="no-scrollbar flex flex-1 items-center gap-1 overflow-x-auto"
         >
           {SECTIONS_2.map((s, i) => {

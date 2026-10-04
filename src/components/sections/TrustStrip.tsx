@@ -5,7 +5,8 @@ import { cn } from "@/lib/cn";
 const ITEMS = [
   { icon: Gem, label: "Premium Quality" },
   { icon: BadgeIndianRupee, label: "Value-Based Pricing" },
-  { icon: CalendarDays, label: `Since ${SITE.established}` },
+  /* Below 1024px the hero's own trust row already says this, directly above */
+  { icon: CalendarDays, label: `Since ${SITE.established}`, desktopOnly: true },
   { icon: MapPin, label: "KR Puram" },
 ];
 
@@ -13,11 +14,12 @@ export function TrustStrip() {
   return (
     <section aria-label="Why clients choose Express Cuts" className="border-y border-line bg-paper">
       <ul className="shell grid grid-cols-2 lg:grid-cols-4">
-        {ITEMS.map(({ icon: Icon, label }, i) => (
+        {ITEMS.map(({ icon: Icon, label, desktopOnly }, i) => (
           <li
             key={label}
             className={cn(
-              "flex items-center gap-3 py-5 text-[14px] font-medium text-ink-soft lg:justify-center lg:py-7",
+              desktopOnly ? "hidden lg:flex" : "flex",
+              "items-center gap-3 py-5 text-[14px] font-medium text-ink-soft lg:justify-center lg:py-7",
               i > 0 && "lg:border-l lg:border-line",
             )}
           >

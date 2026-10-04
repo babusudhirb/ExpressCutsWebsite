@@ -77,12 +77,13 @@ function ServiceCardInner({ service: s }: { service: Service }) {
           }}
         />
       </div>
+      {/* Contrast for the title only: clear above, a light dark tint behind the text */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-white via-white/85 to-white/0"
+        className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-black/60 via-black/25 to-black/0"
       />
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-4 sm:p-5">
-        <h3 className="text-[15px] font-medium leading-[1.3] text-ink sm:text-[16px]">
+        <h3 className="text-[15px] font-medium leading-[1.3] text-white [text-shadow:0_1px_6px_rgb(0_0_0/0.45)] sm:text-[16px]">
           {s.title[0]}
           <br />
           {s.title[1]}

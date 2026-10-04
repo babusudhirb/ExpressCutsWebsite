@@ -55,12 +55,15 @@ export function WaBtn2({
   size = "md",
   className,
   label = "WhatsApp",
+  icon,
   context,
 }: {
   href: string;
   size?: Size;
   className?: string;
-  label?: string;
+  label?: React.ReactNode;
+  /** Replaces the default glyph (the mobile hero draws the WhatsApp mark) */
+  icon?: React.ReactNode;
   context?: string;
 }) {
   return (
@@ -72,7 +75,7 @@ export function WaBtn2({
       aria-label={`Message Express Cuts on WhatsApp${context ? ` ${context}` : ""}`}
       className={cn(base, SIZES[size], GREEN, className)}
     >
-      <MessageCircle aria-hidden className="size-4" strokeWidth={2} />
+      {icon ?? <MessageCircle aria-hidden className="size-4" strokeWidth={2} />}
       {label}
     </a>
   );

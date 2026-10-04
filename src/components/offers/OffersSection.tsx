@@ -15,6 +15,7 @@ import { HOME_OFFERS, type HomeOffer } from "@/data/home-offers";
 import { SITE, TEL } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useStepScroll } from "@/hooks/useStepScroll";
 import { Eyebrow } from "@/components/ui/button";
 import { StepButtons } from "@/components/ui/StepButtons";
 import { OfferCard2 } from "@/components/offer-card/OfferCard2";
@@ -35,8 +36,8 @@ type Layout = "side" | "stacked";
 type Geometry = { overflow: number; offsets: number[]; cardW: number };
 
 /**
- * At every size, native vertical scroll drives the nine cards sideways — no wheel
- * handlers, no scroll-jacking, and no swipe-only track.
+ * At every size, vertical scroll drives the nine cards sideways. Below 1024px the
+ * pinned zone is stepped (`useStepScroll`): one gesture moves exactly one card.
  * Wide and tall → intro beside the pinned track. Otherwise → intro above it.
  * Reduced motion → a static grid.
  */
@@ -156,20 +157,26 @@ function OffersPinned({ layout }: { layout: Layout }) {
     setActive(Math.min(N - 1, Math.max(0, Math.round(v * (N - 1)))));
   });
 
+  /* Phones and tablets: one gesture = one card. Rest positions are one card pitch apart. */
+  const narrow = useMediaQuery("(max-width: 1023px)");
+  const pitch = (geom.offsets[1] ?? 0) - (geom.offsets[0] ?? 0);
+  const rests = geom.overflow > 0 && pitch > 0 ? Math.round(geom.overflow / pitch) + 1 : 1;
+  const stepScroll = useStepScroll(zoneRef, rests, narrow && !side);
+
   const scrollToProgress = useCallback((p: number, smooth: boolean) => {
     const el = zoneRef.current;
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY;
     const distance = el.offsetHeight - window.innerHeight;
-    window.scrollTo({ top: top + Math.min(1, Math.max(0, p)) * distance, behavior: smooth ? "smooth" : "auto" });
+    window.scrollTo({ top: top + Math.min(1, Math.max(0, p)) * distance, behavior: smooth ? "smooth" : "instant" });
   }, []);
 
   /* One press = one card of travel. The track carries two cards on a wide screen,
      so it has fewer hand-overs than it has cards; the pitch comes from the
      measured card positions rather than the card count. */
   const step = (dir: -1 | 1) => {
-    const { overflow, offsets } = geom;
-    const pitch = (offsets[1] ?? 0) - (offsets[0] ?? 0);
+    if (stepScroll(dir)) return;
+    const { overflow } = geom;
     if (overflow <= 0 || pitch <= 0) return scrollToProgress((active + dir) / (N - 1), true);
     const last = Math.round(overflow / pitch);
     const here = Math.round((scrollYProgress.get() * overflow) / pitch);

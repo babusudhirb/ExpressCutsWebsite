@@ -124,7 +124,7 @@ function CutsPinned() {
     const distance = el.offsetHeight - window.innerHeight;
     window.scrollTo({
       top: top + Math.min(1, Math.max(0, p)) * distance,
-      behavior: smooth ? "smooth" : "auto",
+      behavior: smooth ? "smooth" : "instant",
     });
   }, []);
 

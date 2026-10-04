@@ -185,7 +185,7 @@ function Pinned({
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY;
     const distance = el.offsetHeight - window.innerHeight;
-    window.scrollTo({ top: top + Math.min(1, Math.max(0, p)) * distance, behavior: smooth ? "smooth" : "auto" });
+    window.scrollTo({ top: top + Math.min(1, Math.max(0, p)) * distance, behavior: smooth ? "smooth" : "instant" });
   }, []);
 
   const step = (dir: -1 | 1) => scrollToProgress((active + dir) / Math.max(1, pages - 1), true);

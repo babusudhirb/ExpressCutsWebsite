@@ -156,7 +156,7 @@ export function ScrollRail({
     const { overflow, top } = geom.current;
     if (!pinned || !zone || overflow <= 0 || n < 2) return;
     const zoneTop = zone.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: zoneTop - top + (i / (n - 1)) * overflow, behavior: "auto" });
+    window.scrollTo({ top: zoneTop - top + (i / (n - 1)) * overflow, behavior: "instant" });
   };
 
   return (
