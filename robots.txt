@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://expresscuts.co.in
+Sitemap: https://expresscuts.co.in/sitemap.xml
