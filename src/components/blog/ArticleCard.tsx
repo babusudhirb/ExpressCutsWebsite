@@ -22,10 +22,9 @@ function ReadMore({ post }: { post: PostCard }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      aria-label={`Read more: ${post.title}`}
       className="group/btn inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold text-bronze"
     >
-      Read More <Arrow />
+      Read More<span className="sr-only">: {post.title}</span> <Arrow />
     </Link>
   );
 }

@@ -31,10 +31,9 @@ export function GalleryHero() {
             id="gallery-title"
             className="mt-4 font-display text-[clamp(2.4rem,5vw,3.9rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-ivory"
           >
-            Inside
+            Inside{" "}
             <br />
             <em className="font-medium text-champagne-soft">Express Cuts.</em>
-            <span className="sr-only"> — Men&rsquo;s Salon Gallery in KR Puram</span>
           </h1>
           <p className="mt-4 text-[15.5px] text-ivory-soft">Men&rsquo;s Salon · KR Puram · Bengaluru</p>
           <span aria-hidden className="mt-7 block h-px w-12 bg-champagne" />

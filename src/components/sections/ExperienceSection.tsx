@@ -24,7 +24,7 @@ export function ExperienceSection() {
             Than a Salon
           </h2>
           <p className="mt-6 max-w-[40ch] text-[16px] leading-relaxed text-ink-soft">
-            Welcome to Express Cuts Men&rsquo;s Salon, where style and sophistication meet. We&rsquo;re
+            Welcome to Express Cuts Unisex Salon, where style and sophistication meet. We&rsquo;re
             committed to high-quality service at value-based pricing, right at the centre of KR Puram in
             Ayyappa Nagar.
           </p>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SERVICE_CARDS } from "@/data/popular";
 import { cn } from "@/lib/cn";
 import { Arrow, Eyebrow, btn } from "@/components/ui/button";
@@ -26,9 +27,9 @@ export function PopularServices() {
               Professional care. Modern style. The right price.
             </p>
           </div>
-          <a href="#services" className={btn("outline", "md")}>
+          <Link href="#services" className={btn("outline", "md")}>
             View All Services <Arrow />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-10 lg:mt-12">

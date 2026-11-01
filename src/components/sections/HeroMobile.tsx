@@ -31,7 +31,7 @@ export function HeroMobile() {
           /* From 1024px the browser picks a blank source: desktop never fetches this photo */
           skip="(min-width: 1024px)"
           src="/images/hero/home-hero-mobile-salon.webp"
-          alt="Inside Express Cuts Men's Salon in KR Puram — styling chairs, product shelves and the reception desk"
+          alt="Inside Express Cuts Unisex Salon in KR Puram — styling chairs, product shelves and the reception desk"
           fill
           loading="eager"
           fetchPriority="high"

@@ -13,9 +13,9 @@ import { HairSpaCTA } from "@/components/hair-spa/HairSpaCTA";
 import { HAIR_SPA_HERO } from "@/data/hair-spa";
 import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
-const TITLE = "Men's Hair Spa in KR Puram, Bengaluru | Express Cuts";
+const TITLE = "Men's Hair Spa in KR Puram | Express Cuts Unisex Salon";
 const DESCRIPTION =
-  "Professional men's hair spa and hair treatment in KR Puram, Bengaluru. Hair nourishment, scalp care and grooming at Express Cuts Men's Salon.";
+  "Professional men's hair spa and hair treatment in KR Puram, Bengaluru. Hair nourishment, scalp care and grooming at Express Cuts Unisex Salon.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -37,7 +37,7 @@ const SCHEMA = [
     name: "Men's Hair Spa",
     serviceType: "Hair spa and hair treatment for men",
     description:
-      "Hair spa and scalp treatments for men at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru.",
+      "Hair spa and scalp treatments for men at Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru.",
     path: "/hair-spa",
   }),
   breadcrumbs([{ name: "Men's Hair Spa", path: "/hair-spa" }]),

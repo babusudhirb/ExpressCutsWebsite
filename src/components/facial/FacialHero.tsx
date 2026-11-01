@@ -10,7 +10,7 @@ import { CallBtn2 } from "@/components/offer-card/actions";
 
 const d = (ms: number) => ({ "--d": ms }) as React.CSSProperties;
 
-const ALT = "Therapist brushing a cream facial mask onto a relaxed client at Express Cuts";
+const ALT = "Therapist brushing a cream facial mask onto a relaxed client";
 
 function Trust({ className }: { className?: string }) {
   const item = "flex items-center gap-3";
@@ -127,13 +127,12 @@ export function FacialHero() {
             >
               <span className="hero-line">
                 <span style={d(180)}>Clearer Skin.</span>
-              </span>
+              </span>{" "}
               <span className="hero-line">
                 <span style={d(290)}>
                   <em className="font-medium text-champagne-soft">Better Presence.</em>
                 </span>
               </span>
-              <span className="sr-only"> — Men’s Facial in KR Puram, Bengaluru</span>
             </h1>
 
             <p className="hero-rise mt-6 max-w-[44ch] text-[16.5px] leading-[1.6] text-ivory-soft sm:text-[18px]" style={d(480)}>

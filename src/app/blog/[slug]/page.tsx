@@ -126,7 +126,7 @@ export default async function ArticlePage({ params }: PageProps<"/blog/[slug]">)
                   <span>
                     By{" "}
                     <Link href="/our-story" className="font-medium text-ink underline-offset-4 hover:underline">
-                      the Express Cuts team
+                      The Express Cuts Team
                     </Link>
                   </span>
                 </li>

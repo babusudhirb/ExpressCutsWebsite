@@ -6,8 +6,12 @@
 export const SITE = {
   /** Public origin, once the domain is live — set NEXT_PUBLIC_SITE_URL to enable canonical/OG URLs */
   url: process.env.NEXT_PUBLIC_SITE_URL,
-  name: "Express Cuts Men's Salon",
+  name: "Express Cuts Unisex Salon",
   shortName: "Express Cuts",
+  /* The name on the Google listing (as shown 2026-11-01). The site's brand is `name`. */
+  listingName: "Express Cuts Men's Salon - KR Puram",
+  description:
+    "Express Cuts is a unisex salon in KR Puram, Bengaluru, offering men's haircuts, beard grooming, facials, hair spa and hair colour services.",
   established: 2021,
   phone: "8970000135",
   phoneDisplay: "+91 89700 00135",
@@ -30,7 +34,7 @@ export const SITE = {
   ],
   /* Keyless embed of the same place the short maps link opens */
   mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(
-    "Express Cuts Men's Salon, 25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout, Krishnarajapuram, Bengaluru, Karnataka 560037",
+    "Express Cuts Men's Salon - KR Puram, 25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout, Krishnarajapuram, Bengaluru, Karnataka 560037",
   )}&output=embed`,
 } as const;
 

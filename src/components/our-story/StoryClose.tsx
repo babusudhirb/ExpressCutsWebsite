@@ -60,7 +60,7 @@ export function OffersStrip() {
           </h2>
           <p className="mt-2 text-[14.5px] text-ivory-muted">Explore current men&rsquo;s grooming offers at Express Cuts.</p>
         </div>
-        <a href="/offers" className={btn("ivory", "lg", "uppercase tracking-[0.08em] bg-champagne-soft hover:bg-white")}>
+        <a href="/offers/" className={btn("ivory", "lg", "uppercase tracking-[0.08em] bg-champagne-soft hover:bg-white")}>
           See offers <Arrow />
         </a>
       </div>
@@ -160,7 +160,7 @@ export function StoryLocation() {
         <Reveal variant="clip" delay={0.1}>
           <div className="overflow-hidden rounded-[18px] bg-paper shadow-card">
             <iframe
-              title="Google Map showing Express Cuts Men's Salon, Ayyappa Nagar Main Rd, KR Puram"
+              title="Google Map showing Express Cuts Unisex Salon, Ayyappa Nagar Main Rd, KR Puram"
               src={SITE.mapsEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -187,7 +187,7 @@ export function StoryCTA() {
             Look Good. Feel Better.
           </h2>
           <p className="mt-3 text-[15.5px] text-ivory-soft">
-            Experience Express Cuts Men&rsquo;s Salon in KR Puram, Bengaluru.
+            Experience Express Cuts Unisex Salon in KR Puram, Bengaluru.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">

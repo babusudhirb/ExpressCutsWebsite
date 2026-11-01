@@ -9,8 +9,11 @@ import { HOURS, SITE } from "./site";
  * Everything is derived from src/lib/site.ts, so the facts have a single home.
  */
 
+/* The static export serves every page from a folder, so its address ends in a slash */
+const slashed = (path: string) => (/[#?]|\.[a-z0-9]+$|\/$/i.test(path) ? path : `${path}/`);
+
 /** Absolute URL for schema (JSON-LD needs real URLs, metadataBase does not apply) */
-export const abs = (path: string) => (SITE.url ? new URL(path, SITE.url).toString() : path);
+export const abs = (path: string) => (SITE.url ? new URL(slashed(path), SITE.url).toString() : slashed(path));
 
 /** The salon's stable node id, referenced from every page */
 export const BUSINESS_ID = abs("/#business");
@@ -23,10 +26,10 @@ export const businessSchema = () => ({
   "@type": "HairSalon",
   "@id": BUSINESS_ID,
   name: SITE.name,
-  /* The Google Business Profile this site points at (SITE.mapsUrl) is listed as
-     "Express Cuts Salon for Men - KR Puram". Publishing it as an alias lets Google
-     reconcile the listing with the site; the site's own name stays the brand name. */
-  alternateName: "Express Cuts Salon for Men - KR Puram",
+  /* The name the Google listing behind SITE.mapsUrl shows. Publishing it as an alias
+     lets Google reconcile the listing with the site; the brand stays `name`. */
+  alternateName: SITE.listingName,
+  description: SITE.description,
   url: abs("/"),
   image: abs("/images/gallery/express-cuts-salon-exterior-kr-puram.webp"),
   telephone: `+91-${SITE.phone}`,
@@ -128,13 +131,13 @@ export const articleSchema = ({
   image: [abs(image)],
   datePublished: published,
   dateModified: modified,
-  author: { "@type": "HairSalon", "@id": BUSINESS_ID, name: SITE.name, url: abs("/our-story") },
+  author: { "@type": "Organization", name: "The Express Cuts Team", url: abs("/our-story"), parentOrganization: businessRef },
   publisher: businessRef,
   mainEntityOfPage: { "@type": "WebPage", "@id": abs(path) },
   articleSection: section,
   keywords: keywords.join(", "),
   inLanguage: "en-IN",
-  isPartOf: { "@type": "Blog", "@id": abs("/blog#blog") },
+  isPartOf: { "@type": "Blog", "@id": abs("/blog/#blog") },
 });
 
 /** The single <script> the root layout renders */

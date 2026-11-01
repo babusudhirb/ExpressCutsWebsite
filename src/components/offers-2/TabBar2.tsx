@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Crown, Gift, Scissors, Sparkles, Sun } from "lucide-react";
 import { SECTIONS_2 } from "@/data/offers-2";
@@ -74,7 +75,7 @@ export function TabBar2() {
             const Icon = ICONS[i] ?? Scissors;
             const on = active === s.id;
             return (
-              <a
+              <Link
                 key={s.id}
                 href={`#${s.id}`}
                 aria-current={on ? "true" : undefined}
@@ -85,7 +86,7 @@ export function TabBar2() {
               >
                 <Icon aria-hidden className="size-[17px] text-[#d4b489]" strokeWidth={1.6} />
                 {LABELS[i] ?? s.title}
-              </a>
+              </Link>
             );
           })}
         </nav>

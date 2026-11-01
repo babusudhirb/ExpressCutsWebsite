@@ -63,7 +63,7 @@ export function WaveHero({
           >
             {title.map((line) => (
               <span key={line} className="block">
-                {line}
+                {line}{" "}
               </span>
             ))}
           </h1>

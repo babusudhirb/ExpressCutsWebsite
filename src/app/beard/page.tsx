@@ -14,7 +14,7 @@ import { BeardFaq } from "@/components/beard/BeardFaq";
 import { BeardCTA } from "@/components/beard/BeardCTA";
 import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
-const TITLE = "Men’s Beard Grooming in KR Puram, Bengaluru | Express Cuts";
+const TITLE = "Men's Beard Grooming in KR Puram | Express Cuts Unisex Salon";
 const DESCRIPTION =
   "Men's beard grooming at Express Cuts, Ayyappa Nagar, KR Puram — beard trim, shaping, line-up and shaving. Walk-ins welcome, open 7 days.";
 
@@ -38,7 +38,7 @@ const SCHEMA = [
     name: "Men's Beard Grooming",
     serviceType: "Beard trim, shaping, line-up and shaving for men",
     description:
-      "Men's beard grooming at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru: beard trim, shaping, line-up and shaving.",
+      "Men's beard grooming at Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru: beard trim, shaping, line-up and shaving.",
     path: "/beard",
   }),
   breadcrumbs([{ name: "Men's Beard Grooming", path: "/beard" }]),

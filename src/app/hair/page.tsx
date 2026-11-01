@@ -11,7 +11,7 @@ import { HairProcess } from "@/components/hair/HairProcess";
 import { HairCTA } from "@/components/hair/HairCTA";
 import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
-const TITLE = "Men's Haircut in KR Puram, Bengaluru | Express Cuts";
+const TITLE = "Men's Haircut in KR Puram | Express Cuts Unisex Salon";
 const DESCRIPTION =
   "Men's haircuts and styling at Express Cuts, Ayyappa Nagar, KR Puram — classic cuts, fades, tapers and textured crops from ₹99. Walk-ins welcome.";
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/images/hair/mens-haircut-styling-session.png",
         width: 1774,
         height: 887,
-        alt: "Men's haircut at Express Cuts Men's Salon in KR Puram, Bengaluru",
+        alt: "Barber giving a client a men's haircut",
       },
     ],
   },
@@ -41,7 +41,7 @@ const SCHEMA = [
     name: "Men's Haircut",
     serviceType: "Men's haircut and styling",
     description:
-      "Men's haircuts and styling at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru — classic cuts, fades, tapers and textured crops.",
+      "Men's haircuts and styling at Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru — classic cuts, fades, tapers and textured crops.",
     path: "/hair",
   }),
   breadcrumbs([{ name: "Men's Haircut", path: "/hair" }]),

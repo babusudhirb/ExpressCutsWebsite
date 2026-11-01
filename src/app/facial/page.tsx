@@ -11,9 +11,9 @@ import { FacialReviews } from "@/components/facial/FacialReviews";
 import { FacialCTA } from "@/components/facial/FacialCTA";
 import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
-const TITLE = "Men’s Facial in KR Puram | Express Cuts Men’s Salon";
+const TITLE = "Men's Facial in KR Puram | Express Cuts Unisex Salon";
 const DESCRIPTION =
-  "Explore men’s facial treatments at Express Cuts Men’s Salon in KR Puram, Bengaluru, including Type 1, Type 2, Type 3, Type 4 and Hydra Facial options.";
+  "Explore men’s facial treatments at Express Cuts Unisex Salon in KR Puram, Bengaluru, including Type 1, Type 2, Type 3, Type 4 and Hydra Facial options.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "/images/services/facial-treatment.png",
         width: 1536,
         height: 1024,
-        alt: "Therapist brushing a facial mask onto a client at Express Cuts",
+        alt: "Therapist brushing a facial mask onto a client",
       },
     ],
   },
@@ -42,7 +42,7 @@ const SCHEMA = [
     name: "Men's Facial",
     serviceType: "Facials and skin treatments for men",
     description:
-      "Men's facials at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru, including Type 1 to Type 4 facials and the Hydra Facial.",
+      "Men's facials at Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru, including Type 1 to Type 4 facials and the Hydra Facial.",
     path: "/facial",
   }),
   breadcrumbs([{ name: "Men's Facial", path: "/facial" }]),

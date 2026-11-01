@@ -4,6 +4,9 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 import { BLOG_POSTS, postModified } from "@/data/blog-posts";
 
+/** The last real content change to these pages. Update it when a page's content changes; a build is not an edit. */
+const PAGES_UPDATED = "2026-11-01";
+
 /** Every page that exists. Absolute URLs need NEXT_PUBLIC_SITE_URL. */
 const ROUTES = [
   { path: "/", priority: 1 },
@@ -21,16 +24,15 @@ const ROUTES = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url?.replace(/\/$/, "") ?? "";
-  const lastModified = new Date();
   const pages = ROUTES.map(({ path, priority }) => ({
-    url: `${base}${path}`,
-    lastModified,
+    url: `${base}${path === "/" ? "/" : `${path}/`}`,
+    lastModified: new Date(PAGES_UPDATED),
     changeFrequency: "monthly" as const,
     priority,
   }));
   /* Articles report their real last edit, not the build date */
   const articles = BLOG_POSTS.map((post) => ({
-    url: `${base}/blog/${post.slug}`,
+    url: `${base}/blog/${post.slug}/`,
     lastModified: new Date(postModified(post)),
     changeFrequency: "monthly" as const,
     priority: 0.6,

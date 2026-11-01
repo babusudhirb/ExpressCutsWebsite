@@ -7,7 +7,7 @@ import { WaveHero } from "@/components/ui/WaveHero";
 import { BLOG_CATEGORIES, BLOG_POSTS, postModified, toCard } from "@/data/blog-posts";
 import { abs, breadcrumbs, businessRef } from "@/lib/schema";
 
-const TITLE = "Men's Grooming Blog | Haircut, Beard & Hair Care Tips | Express Cuts";
+const TITLE = "Men's Grooming Blog: Haircut & Beard Tips | Express Cuts";
 const DESCRIPTION =
   "Explore practical men's haircut, beard grooming, facial, hair spa and hair colour guides from Express Cuts Unisex Salon in KR Puram, Bengaluru.";
 
@@ -47,7 +47,7 @@ const SCHEMA = [
     about: businessRef,
     mainEntity: {
       "@type": "Blog",
-      "@id": abs("/blog#blog"),
+      "@id": abs("/blog/#blog"),
       name: "Express Cuts Blog",
       url: abs("/blog"),
       publisher: businessRef,

@@ -77,7 +77,7 @@ function Visit() {
 
       <div className="mt-6 overflow-hidden rounded-[18px] bg-paper shadow-card">
         <iframe
-          title="Google Map showing Express Cuts Men's Salon in Ayyappa Nagar, KR Puram"
+          title="Google Map showing Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram"
           src={SITE.mapsEmbedUrl}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

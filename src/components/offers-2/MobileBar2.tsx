@@ -19,6 +19,7 @@ export function MobileBar2() {
   return (
     <div
       aria-hidden={hidden}
+      inert={hidden}
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 flex items-center gap-2.5 border-t border-[#1a1612]/10 bg-white px-3.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] pt-2.5 shadow-[0_-10px_30px_-18px_rgb(0_0_0/0.5)] transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:hidden",
         hidden ? "pointer-events-none translate-y-full opacity-0" : "translate-y-0 opacity-100",

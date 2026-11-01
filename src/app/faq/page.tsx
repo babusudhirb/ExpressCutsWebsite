@@ -7,7 +7,7 @@ import { WaveHero } from "@/components/ui/WaveHero";
 import { FAQ_CATEGORIES, FAQ_ITEMS, faqPlain } from "@/data/faq-page";
 import { breadcrumbs, faqSchema } from "@/lib/schema";
 
-const TITLE = "Express Cuts FAQs | Haircuts, Grooming & Salon Information in KR Puram";
+const TITLE = "Express Cuts Salon FAQs | Haircuts, Hours & Location";
 const DESCRIPTION =
   "Find answers about Express Cuts Unisex Salon in KR Puram, including haircuts, beard grooming, facials, hair spa, offers, opening hours and location.";
 

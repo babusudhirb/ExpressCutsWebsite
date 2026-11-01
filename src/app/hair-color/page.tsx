@@ -10,9 +10,9 @@ import { HairColorPackages } from "@/components/hair-color/HairColorPackages";
 import { HAIR_COLOR_HERO } from "@/data/hair-color";
 import { breadcrumbs, serviceSchema } from "@/lib/schema";
 
-const TITLE = "Men's Hair Color in KR Puram, Bengaluru | Express Cuts";
+const TITLE = "Men's Hair Color in KR Puram | Express Cuts Unisex Salon";
 const DESCRIPTION =
-  "Professional men's hair color, highlights, streaks and grey coverage at Express Cuts Men's Salon in KR Puram, Bengaluru.";
+  "Professional men's hair color, highlights, streaks and grey coverage at Express Cuts Unisex Salon in KR Puram, Bengaluru.";
 const OG_IMAGE = {
   url: HAIR_COLOR_HERO.src,
   width: HAIR_COLOR_HERO.width,
@@ -36,7 +36,7 @@ const SCHEMA = [
     name: "Men's Hair Color",
     serviceType: "Men's hair colour, highlights, streaks and grey coverage",
     description:
-      "Men's hair colour, grey coverage, streaks and highlights at Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru.",
+      "Men's hair colour, grey coverage, streaks and highlights at Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru.",
     path: "/hair-color",
   }),
   breadcrumbs([{ name: "Men's Hair Color", path: "/hair-color" }]),

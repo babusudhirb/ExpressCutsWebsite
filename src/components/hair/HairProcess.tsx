@@ -19,8 +19,7 @@ export function HairProcess() {
 
         <ol className="mt-10 grid gap-x-8 gap-y-9 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
           {PROCESS_STEPS.map((step, i) => (
-            <Reveal key={step.number} delay={i * 0.06}>
-              <li className="border-t border-line pt-5">
+            <Reveal as="li" key={step.number} delay={i * 0.06} className="border-t border-line pt-5">
                 <p className="tabular text-[12px] font-semibold tracking-[0.14em] text-ink-muted">
                   {step.number}
                 </p>
@@ -30,8 +29,7 @@ export function HairProcess() {
                 <p className="mt-2 max-w-[30ch] text-[14.5px] leading-[1.55] text-ink-soft">
                   {step.line}
                 </p>
-              </li>
-            </Reveal>
+              </Reveal>
           ))}
         </ol>
       </div>

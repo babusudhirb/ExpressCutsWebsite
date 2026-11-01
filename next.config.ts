@@ -2,9 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  /* Export hair/index.html, not hair.html: Next also writes a hair/ folder of route
+     data, and a folder with no index answers 403 on Hostinger. */
+  trailingSlash: true,
   images: {
-    unoptimized: true,
-    formats: ["image/avif", "image/webp"],
+    /* Static hosting: scripts/optimize-images.mjs writes these widths after the build */
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
+    deviceSizes: [640, 828, 1200, 1920],
+    imageSizes: [256, 384],
     qualities: [75, 85],
     /* Google reviewer photos, shown only where supplied (unoptimized, no referrer) */
     remotePatterns: [{ protocol: "https", hostname: "lh3.googleusercontent.com" }],

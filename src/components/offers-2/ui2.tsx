@@ -27,7 +27,7 @@ export function Wordmark2({ tone = "ink" }: { tone?: "ink" | "ivory" }) {
         >
           EXPRESS CUTS
         </span>
-        <span className="mt-1 block text-[9.5px] font-medium tracking-[0.3em] text-[#b0834f]">MEN&rsquo;S SALON</span>
+        <span className="mt-1 block text-[9.5px] font-medium tracking-[0.3em] text-[#b0834f]">UNISEX SALON</span>
       </span>
     </span>
   );

@@ -123,13 +123,12 @@ function Copy() {
       >
         <span className="hero-line">
           <span style={d(180)}>Repair.</span>
-        </span>
+        </span>{" "}
         <span className="hero-line">
           <span style={d(290)}>
             Restore. <em className="font-medium text-champagne-soft">Revive.</em>
           </span>
         </span>
-        <span className="sr-only"> — Men’s Hair Spa in KR Puram, Bengaluru</span>
       </h1>
       <p className="hero-rise mt-4 text-[16px] leading-snug text-ivory-soft sm:text-[18px]" style={d(460)}>
         Men&rsquo;s Hair Spa &amp; Hair Treatment in KR Puram, Bengaluru.

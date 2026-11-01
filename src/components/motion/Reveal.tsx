@@ -22,15 +22,19 @@ export function Reveal({
   variant = "rise",
   className,
   delay = 0,
+  as = "div",
 }: {
   children: React.ReactNode;
   variant?: "clip" | "rise";
   className?: string;
   delay?: number;
+  /** The element to render, where a div would break the parent's markup */
+  as?: "div" | "li";
 }) {
   const reduce = useMediaQuery("(prefers-reduced-motion: reduce)");
+  const Tag = as === "li" ? motion.li : motion.div;
   return (
-    <motion.div
+    <Tag
       className={className}
       initial={reduce ? false : "hidden"}
       whileInView="show"
@@ -39,6 +43,6 @@ export function Reveal({
       transition={{ delay }}
     >
       {children}
-    </motion.div>
+    </Tag>
   );
 }

@@ -1,4 +1,4 @@
-import { SITE, TEL, waLink } from "@/lib/site";
+import { HOURS, SITE, TEL, waLink } from "@/lib/site";
 import { ALL_OFFERS_2, inr2 } from "@/data/offers-2";
 import { plainText } from "@/lib/rich-text";
 
@@ -68,7 +68,7 @@ const p = (text: string): Block => ({ t: "p", text });
 const ul = (...items: string[]): Block => ({ t: "ul", items });
 const ol = (...items: string[]): Block => ({ t: "ol", items });
 
-const LAUNCH = "2026-10-31";
+const LAUNCH = "2026-11-01";
 
 const AAD_HAIR = { label: "American Academy of Dermatology: Tips for healthy hair", href: "https://www.aad.org/public/everyday-care/hair-scalp-care/hair/healthy-hair-tips" };
 const AAD_BEARD = { label: "American Academy of Dermatology: A dermatologist's top tips for a healthy beard", href: "https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard" };
@@ -317,7 +317,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ),
 
       h2("How should you trim a beard at home?"),
-      p("Trim on clean hair, and work in stages. It is far easier to take off a little more than to wait for a mistake to grow back."),
+      p("Trim on clean hair, and work in stages. A warm shower softens the hair first; towel it mostly dry before you judge the length. It is far easier to take off a little more than to wait for a mistake to grow back."),
       ol(
         "Comb everything downward so you can see the true length. Curly beards can look shorter than they are.",
         "Set your trimmer guard longer than you think you need, and work down the sides first.",
@@ -358,7 +358,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       h2("What mistakes should you avoid?"),
       ul(
-        "**Trimming when wet.** Wet hair looks longer, so you can take off more than you intended.",
+        "**Cutting length while the beard is dripping wet.** Wet hair looks longer, so towel it mostly dry first or you can take off more than you intended.",
         "**Setting the neckline too high.** Your beard will look smaller and your jaw less defined.",
         "**Skipping the skin.** A soft beard over dry skin will still itch.",
         "**Blunt blades.** Dull trimmers and razors pull at the hair. Keep them clean and replace blades regularly.",
@@ -372,7 +372,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     questions: [
       { q: "How do I make a patchy beard look better?", a: "Keep it shorter. Heavy stubble or a short boxed shape hides thin areas, and a barber can blend the outline so patches stand out less." },
-      { q: "Should I trim my beard wet or dry?", a: "Trim once the hair is clean and mostly dry. Wet hair looks longer than it is, so it is easy to cut too much." },
+      { q: "Should I trim my beard wet or dry?", a: "Soften it in a warm shower, then trim once it is towelled mostly dry. Wet hair looks longer than it is, so it is easy to cut too much." },
       { q: "What is the difference between a trim and a line-up?", a: "A trim shortens the length of the beard. A line-up sharpens its edges on the cheeks and neck. See our [beard grooming FAQs](/faq#beard-trim) for what Express Cuts offers." },
     ],
     sources: [AAD_BEARD, AAD_FACIAL_HAIR],
@@ -717,7 +717,7 @@ export const BLOG_POSTS: BlogPost[] = [
       p(`The salon is on Ayyappa Nagar Main Road in Priyadarshini Layout, Krishnarajapuram, Bengaluru, roughly 2 KM from Hoodi Circle. The full address is ${SITE.addressLines.join(" ").replace(/,$/, "")}. The quickest way to find it is to [open the Google Maps listing](${SITE.mapsUrl}).`),
 
       h2("What are the opening hours?"),
-      ul("**Monday to Friday:** 8:00 AM to 10:00 PM", "**Saturday and Sunday:** 7:00 AM to 10:00 PM"),
+      ul(...HOURS.map((row) => `**${row.label}:** ${row.display}`)),
 
       h2("Do you need an appointment?"),
       p(`No. Walk-ins are welcome. If you would rather plan ahead, [message the salon on WhatsApp](${waLink("Hi, I'd like to visit Express Cuts.")}) or [call ${SITE.phoneDisplay}](${TEL}) to check a suitable time.`),
@@ -744,7 +744,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ),
 
       h2("What is the salon like?"),
-      p("You can see the reception, styling floor and wash area in the [salon gallery](/gallery), and read how Express Cuts began in [our story](/our-story). The salon has been running in KR Puram since 2021."),
+      p(`You can see the reception, styling floor and wash area in the [salon gallery](/gallery), and read how Express Cuts began in [our story](/our-story). The salon has been running in KR Puram since ${SITE.established}.`),
     ],
     summary: [
       "Express Cuts is on Ayyappa Nagar Main Road, about 2 KM from Hoodi Circle.",

@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="on-dark bg-night text-ivory">
       <div className="shell py-16 lg:py-20">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
-          <Link href="/" aria-label="Express Cuts Men's Salon — home" className="self-start">
+          <Link href="/" aria-label="Express Cuts Unisex Salon — home" className="self-start">
             <Wordmark tone="light" />
           </Link>
           {/* Read from NAV; every service page sits under Services */}
@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-ivory/10 pt-6 text-[12.5px] text-ivory-muted sm:flex-row sm:justify-between">
-          <p>© {year} Express Cuts Men&rsquo;s Salon. All rights reserved.</p>
+          <p>© {year} Express Cuts Unisex Salon. All rights reserved.</p>
           <p>Est. 2021 · KR Puram, Bengaluru</p>
         </div>
       </div>

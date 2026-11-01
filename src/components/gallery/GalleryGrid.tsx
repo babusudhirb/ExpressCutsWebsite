@@ -34,13 +34,13 @@ export function GalleryGrid() {
 
   const photos =
     filter === "All Photos" ? GALLERY_PHOTOS : GALLERY_PHOTOS.filter((p) => p.category === (filter as GalleryCategory));
-  const { open, viewer } = useLightbox(photos, "Inside Express Cuts Men's Salon");
+  const { open, viewer } = useLightbox(photos, "Inside Express Cuts Unisex Salon");
 
   return (
     <section id="gallery" aria-labelledby="gallery-grid-title" className="bg-ivory pb-16 pt-12 lg:pb-20 lg:pt-14">
       <div className="shell">
         <h2 id="gallery-grid-title" className="sr-only">
-          Photographs of Express Cuts Men&rsquo;s Salon
+          Photographs of Express Cuts Unisex Salon
         </h2>
 
         <div className="flex flex-wrap items-start justify-between gap-x-10 gap-y-5">

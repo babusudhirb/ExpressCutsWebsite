@@ -1,11 +1,28 @@
 Options -Indexes -MultiViews
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^offers-2/?$ /offers [R=301,L]
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.+?)/?$ $1.html [L]
+  # One host for every page and for search engines
+  RewriteCond %{HTTP_HOST} ^www\.expresscuts\.co\.in$ [NC]
+  RewriteRule ^(.*)$ https://expresscuts.co.in/$1 [R=301,L]
+  # The offers design was built at /offers-2 before it became the live page
+  RewriteRule ^offers-2/?$ /offers/ [R=301,L]
+  # The old site's hair page
+  RewriteRule ^HairStyling\.html$ /hair/ [R=301,L,NC]
 </IfModule>
 
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # Build files carry a content hash, so they can be cached for a year
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|png|jpe?g|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

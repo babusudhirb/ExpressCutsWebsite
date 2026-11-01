@@ -46,18 +46,8 @@ export function Navbar() {
       )}
     >
       <nav aria-label="Primary" className="shell flex h-[var(--nav-h)] items-center gap-6 lg:gap-3 xl:gap-6">
-        <Link href="/" aria-label="Express Cuts Men's Salon — home" className="shrink-0">
-          <Wordmark
-            tagline={
-              /* The homepage's phone header follows its mobile reference */
-              pathname === "/" ? (
-                <>
-                  <span className="lg:hidden">Unisex Salon</span>
-                  <span className="hidden lg:inline">Men&rsquo;s Salon</span>
-                </>
-              ) : undefined
-            }
-          />
+        <Link href="/" aria-label="Express Cuts Unisex Salon — home" className="shrink-0">
+          <Wordmark />
         </Link>
 
         <ul className="mx-auto hidden items-center gap-3 whitespace-nowrap lg:flex xl:gap-7">

@@ -17,7 +17,7 @@ const HOLD = 1000;
  * same five pictures from src/data/our-story.ts.
  */
 export function SalonGalleryGrid() {
-  const { open, viewer } = useLightbox(GALLERY, "Inside Express Cuts Men's Salon");
+  const { open, viewer } = useLightbox(GALLERY, "Inside Express Cuts Unisex Salon");
   const [lead, ...rest] = GALLERY;
 
   const frame =
@@ -84,7 +84,7 @@ export function SalonRotator({
   const reduce = useMediaQuery("(prefers-reduced-motion: reduce)");
   const ref = useRef<HTMLButtonElement>(null);
   const inView = useInView(ref, { amount: 0.35 });
-  const { open, isOpen, viewer } = useLightbox(GALLERY, "Inside Express Cuts Men's Salon");
+  const { open, isOpen, viewer } = useLightbox(GALLERY, "Inside Express Cuts Unisex Salon");
   const [active, setActive] = useState(0);
 
   useEffect(() => {

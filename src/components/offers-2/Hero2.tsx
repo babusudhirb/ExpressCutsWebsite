@@ -32,7 +32,7 @@ export function Hero2() {
             id="o2-hero-title"
             className="mt-4 font-[family-name:var(--font-o2-serif)] lg:mt-6 text-[clamp(2.3rem,4.6vw,4.3rem)] font-semibold leading-[1.06] tracking-[-0.01em] text-[#1a1612]"
           >
-            Men&rsquo;s Grooming
+            Men&rsquo;s Grooming{" "}
             <br />
             Offers in <em className="italic text-[#b0834f]">KR Puram</em>
           </h1>

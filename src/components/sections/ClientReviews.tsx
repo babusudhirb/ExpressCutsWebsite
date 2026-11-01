@@ -63,7 +63,7 @@ export function ClientReviews() {
               <figure className="relative h-full overflow-hidden rounded-[18px] bg-charcoal">
                 <Image
                   src="/images/reviews/express-cuts-salon-reception-ayyappa-nagar.webp"
-                  alt="The lit Express Cuts Men's Salon reception desk in KR Puram"
+                  alt="The lit Express Cuts Unisex Salon reception desk in KR Puram"
                   fill
                   sizes="(min-width: 1280px) 300px, 24vw"
                   className="object-cover"

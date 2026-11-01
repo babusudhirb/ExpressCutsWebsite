@@ -8,9 +8,9 @@ import { GalleryOffer, GalleryVisit } from "@/components/gallery/GalleryClose";
 import { GALLERY_HERO, GALLERY_PHOTOS } from "@/data/gallery";
 import { abs, breadcrumbs, businessRef } from "@/lib/schema";
 
-const TITLE = "Express Cuts Men's Salon Gallery | KR Puram, Bengaluru";
+const TITLE = "Express Cuts Salon Gallery | KR Puram, Bengaluru";
 const DESCRIPTION =
-  "Photographs of Express Cuts Men's Salon in Ayyappa Nagar, KR Puram — the storefront, reception, styling floor, wash area and finished haircuts.";
+  "Photographs of Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram — the storefront, reception, styling floor, wash area and finished haircuts.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -43,7 +43,7 @@ const SCHEMA = [
     about: businessRef,
     mainEntity: {
       "@type": "ImageGallery",
-      name: "Inside Express Cuts Men's Salon",
+      name: "Inside Express Cuts Unisex Salon",
       image: [GALLERY_HERO, ...GALLERY_PHOTOS].map((photo) => ({
         "@type": "ImageObject",
         contentUrl: abs(photo.src),

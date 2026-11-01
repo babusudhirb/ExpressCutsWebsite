@@ -70,7 +70,7 @@ export function StoryHero() {
         <div className="shell relative -mt-12 pb-10 sm:-mt-16 lg:mt-0 lg:flex lg:h-full lg:items-center lg:pb-0">
           <div className="lg:max-w-[600px] lg:py-12">
             <p className="hero-rise eyebrow text-champagne-soft" style={d(90)}>
-              Our Story · Express Cuts Men&rsquo;s Salon
+              Our Story · Express Cuts Unisex Salon
             </p>
 
             {/* One H1: the keyword sentence and the display line live in the same heading */}
@@ -82,7 +82,7 @@ export function StoryHero() {
                 >
                   More Than a Salon.
                 </span>
-              </span>
+              </span>{" "}
               <span className="hero-rise mt-3 block text-[13.5px] font-medium uppercase tracking-[0.2em] text-champagne-soft" style={d(320)}>
                 The Story of Express Cuts, KR Puram&rsquo;s Men&rsquo;s Salon
               </span>

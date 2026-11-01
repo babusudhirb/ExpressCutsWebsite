@@ -69,7 +69,7 @@ function KingsRitualCard() {
       <div className="relative h-52 shrink-0 overflow-hidden sm:order-2 sm:h-auto sm:w-[36%]">
         <Image
           src={k.image}
-          alt="Client relaxing in a robe during The King's Ritual grooming package at Express Cuts, KR Puram"
+          alt="Client relaxing in a robe during a grooming treatment"
           fill
           sizes="(min-width: 1024px) 480px, (min-width: 640px) 72vw, 100vw"
           className="origin-[42%_12%] scale-[1.7] object-cover object-[42%_14%] sm:scale-[1.8]"

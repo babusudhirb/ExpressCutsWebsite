@@ -107,7 +107,7 @@ export function GalleryVisit() {
         <Reveal variant="clip">
           <div className="overflow-hidden rounded-[18px] border border-line">
             <iframe
-              title="Google Map showing Express Cuts Men's Salon, Ayyappa Nagar Main Rd, KR Puram"
+              title="Google Map showing Express Cuts Unisex Salon, Ayyappa Nagar Main Rd, KR Puram"
               src={SITE.mapsEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

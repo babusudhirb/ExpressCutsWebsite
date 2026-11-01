@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowDown, Phone } from "lucide-react";
 import { TEL, waLink } from "@/lib/site";
 import { HAIRCUT_FROM } from "@/data/popular";
@@ -21,10 +22,10 @@ const d = (ms: number) => ({ "--d": ms }) as React.CSSProperties;
 export function Hero() {
   return (
     <section id="hero" aria-labelledby="hero-title" className="hero relative isolate overflow-hidden bg-hero">
-      {/* The page's one heading. The two hero compositions below draw it at their
-          own size — as paragraphs, so the document keeps a single h1. */}
+      {/* The page's one heading, in the words both compositions below show. Each
+          draws them at its own size, so the document keeps a single h1. */}
       <h1 id="hero-title" className="sr-only">
-        A Better You Everyday — Express Cuts Men&rsquo;s Salon in KR Puram, Bengaluru
+        A Better You Everyday
       </h1>
       {/* ≥1024px: the approved desktop composition (display: contents keeps its layout identical) */}
       <div className="hidden lg:contents">
@@ -35,7 +36,7 @@ export function Hero() {
             /* Below 1024px the browser picks a blank source: phones never fetch this photo */
             skip="(max-width: 1023.98px)"
             src="/images/hero/home-hero.webp"
-            alt="Inside Express Cuts Men's Salon in KR Puram — styling chairs, product shelves and the reception desk"
+            alt="Inside Express Cuts Unisex Salon in KR Puram — styling chairs, product shelves and the reception desk"
             fill
             loading="eager"
             fetchPriority="high"
@@ -109,7 +110,7 @@ export function Hero() {
             <OpenStatus variant="plain" />
           </div>
 
-          <a
+          <Link
             href="#services"
             className="hero-rise mt-8 hidden items-center gap-3 text-[13px] font-medium text-ink-muted transition-colors hover:text-ink lg:inline-flex [@media(max-height:780px)]:hidden"
             style={d(960)}
@@ -118,7 +119,7 @@ export function Hero() {
               <ArrowDown aria-hidden className="bob size-3.5" strokeWidth={1.6} />
             </span>
             Scroll to explore
-          </a>
+          </Link>
         </div>
       </div>
       </div>

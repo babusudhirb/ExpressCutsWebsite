@@ -14,17 +14,17 @@ export const STORY_HERO = {
   src: img("express-cuts-salon-interior-kr-puram"),
   width: 1448,
   height: 1086,
-  alt: "Inside Express Cuts Men's Salon in Ayyappa Nagar, KR Puram — styling chairs, mirrors and the reception desk",
+  alt: "Inside Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram — styling chairs, mirrors and the reception desk",
 };
 
 export const STORY_BODY =
-  "Express Cuts Men's Salon was established in 2021 with a simple idea: men's grooming should be professional, approachable and easy to make part of everyday life. From a fresh haircut and beard trim to facial treatments, hair spa, hair color and complete grooming, Express Cuts brings multiple grooming services together under one roof in KR Puram, Bengaluru.";
+  "Express Cuts Unisex Salon was established in 2021 with a simple idea: men's grooming should be professional, approachable and easy to make part of everyday life. From a fresh haircut and beard trim to facial treatments, hair spa, hair color and complete grooming, Express Cuts brings multiple grooming services together under one roof in KR Puram, Bengaluru.";
 
 export const STORY_IMAGE = {
   src: img("express-cuts-salon-styling-stations-kr-puram"),
   width: 900,
   height: 664,
-  alt: "Styling stations and mirrors at Express Cuts men's salon in Krishnarajapuram, Bengaluru",
+  alt: "Styling stations and mirrors at Express Cuts Unisex Salon in Krishnarajapuram, Bengaluru",
 };
 
 /** Owner-supplied milestones only — nothing else is invented */
@@ -49,7 +49,7 @@ export const STORY_SERVICES = [
     title: "Men's Haircuts & Styling",
     href: "/hair",
     src: img("mens-haircut-side-part-styling"),
-    alt: "Men's haircut and hair styling at Express Cuts Men's Salon in KR Puram",
+    alt: "Men's haircut and hair styling",
     position: "50% 30%",
   },
   {
@@ -58,7 +58,7 @@ export const STORY_SERVICES = [
     title: "Men's Beard Grooming",
     href: "/beard",
     src: img("mens-beard-grooming-service"),
-    alt: "Men's beard grooming at Express Cuts Salon in KR Puram",
+    alt: "Men's beard grooming with a trimmer",
     position: "50% 28%",
   },
   {
@@ -67,7 +67,7 @@ export const STORY_SERVICES = [
     title: "Men's Facial & Skin Care",
     href: "/facial",
     src: img("mens-facial-treatment"),
-    alt: "Men's facial treatment at Express Cuts Salon in KR Puram",
+    alt: "Men's facial treatment",
     position: "50% 42%",
   },
   {
@@ -76,7 +76,7 @@ export const STORY_SERVICES = [
     title: "Men's Hair Spa & Hair Treatments",
     href: "/hair-spa",
     src: img("mens-hair-spa-wash"),
-    alt: "Men's hair spa and hair treatment at Express Cuts Salon in KR Puram",
+    alt: "Men's hair spa and hair treatment",
     position: "42% 45%",
   },
   {
@@ -85,7 +85,7 @@ export const STORY_SERVICES = [
     title: "Men's Hair Color & Highlights",
     href: "/hair-color",
     src: img("mens-grey-hair-coverage"),
-    alt: "Men's hair color service at Express Cuts Salon in KR Puram",
+    alt: "Man with silver-grey coloured hair",
     position: "50% 22%",
   },
   {
@@ -94,7 +94,7 @@ export const STORY_SERVICES = [
     title: "Men's Grooming Offers",
     href: "/offers",
     src: img("mens-haircut-in-progress"),
-    alt: "Men's haircut in progress at Express Cuts Salon in Krishnarajapuram",
+    alt: "Men's haircut in progress",
     position: "42% 40%",
   },
 ];
@@ -126,13 +126,13 @@ export const BRANDS = ["L'Oréal", "Schwarzkopf", "Streax", "VLCC", "Tenax"];
 export const GALLERY = [
   {
     src: img("express-cuts-salon-exterior-kr-puram"),
-    alt: "Express Cuts Men's Salon storefront lit up at night on Ayyappa Nagar Main Rd, KR Puram",
+    alt: "Express Cuts Unisex Salon storefront lit up at night on Ayyappa Nagar Main Rd, KR Puram",
     width: 900,
     height: 405,
   },
   {
     src: img("express-cuts-salon-reception-ayyappa-nagar"),
-    alt: "Reception desk inside Express Cuts Men's Salon in Krishnarajapuram, Bengaluru",
+    alt: "Reception desk inside Express Cuts Unisex Salon in Krishnarajapuram, Bengaluru",
     width: 900,
     height: 1080,
   },
@@ -144,13 +144,13 @@ export const GALLERY = [
   },
   {
     src: img("express-cuts-salon-wash-area-kr-puram"),
-    alt: "Hair wash station and grooming area at Express Cuts men's salon near Hoodi",
+    alt: "Hair wash station and grooming area at Express Cuts Unisex Salon near Hoodi",
     width: 900,
     height: 675,
   },
   {
     src: img("express-cuts-salon-styling-stations-kr-puram"),
-    alt: "Row of mirrors and grooming stations at Express Cuts Men's Salon, Bengaluru",
+    alt: "Row of mirrors and grooming stations at Express Cuts Unisex Salon, Bengaluru",
     width: 900,
     height: 664,
   },
@@ -162,7 +162,7 @@ export const STORY_REVIEWERS = ["Kiran Kumar", "Darshancn Darshan", "Vinay K"];
 export const STORY_FAQS: Faq[] = [
   {
     q: "Is Express Cuts only for men?",
-    a: ["Express Cuts is presented as a men's salon and provides men's grooming services."],
+    a: ["Express Cuts is a unisex salon and provides men's grooming services."],
   },
   {
     q: "Do I need an appointment?",

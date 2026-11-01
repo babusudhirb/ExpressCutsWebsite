@@ -39,7 +39,7 @@ export function MenuSheet({ open, onClose, pathname }: Props) {
     >
       <div className="flex min-h-full flex-col">
         <div className="shell flex h-[var(--nav-h)] shrink-0 items-center justify-between">
-          <Link href="/" onClick={onClose} aria-label="Express Cuts Men's Salon — home">
+          <Link href="/" onClick={onClose} aria-label="Express Cuts Unisex Salon — home">
             <Wordmark />
           </Link>
           <button

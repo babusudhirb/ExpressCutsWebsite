@@ -13,7 +13,7 @@ const TRUST = [
   { icon: UserRound, label: "Walk-ins Welcome", sub: "No Appointment Needed" },
 ];
 
-const ALT = "Barber styling a client's textured haircut in the salon chair";
+const ALT = "Barber styling a client's textured haircut";
 
 /**
  * The supplied hair photograph is 2:1 with a blurred cream left half. On desktop it
@@ -100,16 +100,15 @@ export function HairHero() {
           >
             <span className="hero-line">
               <span style={d(180)}>More</span>
-            </span>
+            </span>{" "}
             <span className="hero-line">
               <span style={d(280)}>Than Just</span>
-            </span>
+            </span>{" "}
             <span className="hero-line">
               <span style={d(380)}>
                 a <em className="font-medium text-champagne">Haircut.</em>
               </span>
             </span>
-            <span className="sr-only"> — Men’s Haircut in KR Puram, Bengaluru</span>
           </h1>
 
           <p className="hero-rise mt-5 text-[18px] font-medium leading-[1.5] text-ink" style={d(520)}>

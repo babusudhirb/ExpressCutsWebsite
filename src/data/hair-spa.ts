@@ -11,7 +11,7 @@ export const HAIR_SPA_HERO = {
   src: "/images/hair-spa/mens-hair-spa-treatment.png",
   width: 1536,
   height: 1024,
-  alt: "Men's hair spa treatment at Express Cuts Men's Salon, KR Puram — scalp being lathered and massaged at the wash basin",
+  alt: "Men's hair spa treatment: scalp being lathered and massaged at a wash basin",
 };
 
 export const HAIR_SPA_CHIPS = [

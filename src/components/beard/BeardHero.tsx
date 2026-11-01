@@ -14,7 +14,7 @@ const TRUST = [
   { icon: Droplets, label: "Premium Products" },
 ];
 
-const ALT = "Barber trimming a client's beard with scissors and a comb at Express Cuts";
+const ALT = "Barber trimming a client's beard with scissors and a comb";
 
 /** Offer chip laid over the photograph — the price is part of the first impression */
 function PriceChip({ className }: { className?: string }) {
@@ -102,16 +102,15 @@ export function BeardHero() {
           >
             <span className="hero-line">
               <span style={d(180)}>More Than</span>
-            </span>
+            </span>{" "}
             <span className="hero-line">
               <span style={d(280)}>
                 a <em className="font-medium text-champagne">Trim.</em>
               </span>
-            </span>
+            </span>{" "}
             <span className="hero-line">
               <span style={d(380)}>A Better You.</span>
             </span>
-            <span className="sr-only"> — Men’s Beard Grooming in KR Puram, Bengaluru</span>
           </h1>
 
           <p className="hero-rise mt-5 text-[18px] font-medium leading-[1.5] text-ink" style={d(520)}>

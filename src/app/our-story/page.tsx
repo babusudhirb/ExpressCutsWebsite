@@ -11,9 +11,9 @@ import { STORY_FAQS, STORY_HERO } from "@/data/our-story";
 import { faqPlainText } from "@/data/beard";
 import { abs, breadcrumbs, businessRef, faqSchema } from "@/lib/schema";
 
-const TITLE = "About Express Cuts | Men's Salon in KR Puram Since 2021";
+const TITLE = "About Express Cuts Unisex Salon in KR Puram";
 const DESCRIPTION =
-  "Express Cuts is a men's salon in Ayyappa Nagar, KR Puram, Bengaluru, open since 2021 — haircuts, beard grooming, facials, hair spa and colour.";
+  "Express Cuts is a unisex salon in Ayyappa Nagar, KR Puram, Bengaluru, open since 2021 — haircuts, beard grooming, facials, hair spa and colour.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

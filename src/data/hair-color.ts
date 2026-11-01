@@ -12,7 +12,7 @@ export const HAIR_COLOR_HERO = {
   src: "/images/hair-color/mens-silver-grey-hair-colour.jpg",
   width: 736,
   height: 720,
-  alt: "Men's hair colour at Express Cuts Men's Salon, KR Puram — client with silver-grey coloured hair",
+  alt: "Man with silver-grey coloured hair",
 };
 
 export const COLOR_CHIPS = [
@@ -36,7 +36,7 @@ export const COLOR_LOOKS = [
     title: "Grey Coverage",
     note: "Natural Grey Coverage",
     src: "/images/hair-color/grey-coverage.jpg",
-    alt: "Grey hair coverage for men at Express Cuts, KR Puram",
+    alt: "Grey hair coverage for men",
     position: "50% 16%",
   },
   {
@@ -83,21 +83,21 @@ export const COLOR_PACKAGES = [
     label: "Hair Color + Type 2 Facial",
     /* Natural brown colour — matches a standard hair colour package */
     photo: "/images/hair-color/natural.jpg",
-    photoAlt: "Client with natural brown hair colour after a grooming package at Express Cuts",
+    photoAlt: "Man with natural brown hair colour",
     position: "50% 26%",
   },
   {
     ...pick("executive"),
     label: "Hair Color Streak + Type 3 Facial",
     photo: "/images/hair-color/streaks.jpg",
-    photoAlt: "Client with hair colour streaks after a grooming package at Express Cuts",
+    photoAlt: "Man with hair colour streaks",
     position: "50% 16%",
   },
   {
     ...pick("platinum"),
     label: "L'Oréal Hair Color + Type 4 Facial",
     photo: "/images/hair-color/highlights.jpg",
-    photoAlt: "Client with L'Oréal hair colour highlights after a grooming package at Express Cuts",
+    photoAlt: "Man with hair colour highlights",
     position: "50% 22%",
   },
 ];

@@ -129,7 +129,7 @@ export function Closing2() {
 
           <div className="overflow-hidden rounded-[10px] border border-[#1a1612]/10 bg-[#efe7da]">
             <iframe
-              title="Google Map showing Express Cuts Men's Salon, Ayyappa Nagar, KR Puram"
+              title="Google Map showing Express Cuts Unisex Salon, Ayyappa Nagar, KR Puram"
               src={SITE.mapsEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -188,7 +188,7 @@ export function Closing2() {
             A men&rsquo;s salon in KR Puram, built around grooming offers
           </h2>
           <p className="mt-3 text-[14px] leading-relaxed text-[#4a423b]">
-            Express Cuts Men&rsquo;s Salon sits on Ayyappa Nagar Main Rd in Krishnarajapuram, a short ride from Hoodi
+            Express Cuts Unisex Salon sits on Ayyappa Nagar Main Rd in Krishnarajapuram, a short ride from Hoodi
             and the rest of KR Puram. A men&rsquo;s haircut starts at ₹99 and a beard trim at ₹70, so a sharp cut or a
             clean line-up never needs planning — walk in any day between 8 AM and 10 PM.
           </p>
@@ -203,7 +203,7 @@ export function Closing2() {
       <footer className="border-t border-[#1a1612]/10 bg-[#f6f1e9]">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-6">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-5 py-7">
-            <Link href="/" aria-label="Express Cuts Men's Salon — home">
+            <Link href="/" aria-label="Express Cuts Unisex Salon — home">
               <Wordmark2 />
             </Link>
             <nav aria-label="Offer page 2 footer" className="flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-[#4a423b]">
@@ -227,7 +227,7 @@ export function Closing2() {
             </div>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#1a1612]/10 py-4">
-            <small className="text-[12px] text-[#6b625a]">© 2026 Express Cuts Men&rsquo;s Salon. All rights reserved.</small>
+            <small className="text-[12px] text-[#6b625a]">© 2026 Express Cuts Unisex Salon. All rights reserved.</small>
             <span aria-hidden className="font-[family-name:var(--font-o2-script)] text-[22px] text-[#7a6a58]">
               A New You Everyday
             </span>

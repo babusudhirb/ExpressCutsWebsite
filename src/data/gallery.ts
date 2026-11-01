@@ -19,7 +19,7 @@ const img = (name: string) => `/images/gallery/${name}.webp`;
 /** The hero photograph: the room you walk into */
 export const GALLERY_HERO = {
   src: img("express-cuts-salon-gallery-hero-kr-puram"),
-  alt: "Inside Express Cuts Men's Salon in Ayyappa Nagar, KR Puram — styling chairs, product shelves and the reception desk",
+  alt: "Inside Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram — styling chairs, product shelves and the reception desk",
   width: 1448,
   height: 603,
 };
@@ -28,21 +28,21 @@ export const GALLERY_HERO = {
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
     src: img("express-cuts-salon-exterior-kr-puram"),
-    alt: "Express Cuts Men's Salon storefront lit up on Ayyappa Nagar Main Rd, KR Puram",
+    alt: "Express Cuts Unisex Salon storefront lit up on Ayyappa Nagar Main Rd, KR Puram",
     width: 1600,
     height: 720,
     category: "The Salon",
   },
   {
     src: img("express-cuts-salon-reception-ayyappa-nagar"),
-    alt: "Express Cuts Men's Salon reception desk in Ayyappa Nagar, Bengaluru",
+    alt: "Express Cuts Unisex Salon reception desk in Ayyappa Nagar, Bengaluru",
     width: 1145,
     height: 1374,
     category: "The Details",
   },
   {
     src: img("express-cuts-salon-wash-area-kr-puram"),
-    alt: "Hair wash station at Express Cuts Men's Salon in KR Puram",
+    alt: "Hair wash station at Express Cuts Unisex Salon in KR Puram",
     width: 1400,
     height: 1050,
     category: "The Space",
@@ -56,7 +56,7 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     src: img("mens-haircut-express-cuts-kr-puram"),
-    alt: "Men's haircut finished with a taper fade at Express Cuts Men's Salon, KR Puram",
+    alt: "Men's haircut finished with a taper fade at Express Cuts Unisex Salon, KR Puram",
     width: 1100,
     height: 1467,
     category: "The Experience",
@@ -70,21 +70,21 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     src: img("express-cuts-salon-interior-kr-puram"),
-    alt: "Wide view of the Express Cuts Men's Salon interior in Krishnarajapuram, Bengaluru",
+    alt: "Wide view of the Express Cuts Unisex Salon interior in Krishnarajapuram, Bengaluru",
     width: 1448,
     height: 1086,
     category: "The Space",
   },
   {
     src: img("express-cuts-facial-room-kr-puram"),
-    alt: "Facial and skin treatment room at Express Cuts Men's Salon in KR Puram",
+    alt: "Facial and skin treatment room at Express Cuts Unisex Salon in KR Puram",
     width: 1100,
     height: 1467,
     category: "The Space",
   },
   {
     src: img("kids-haircut-express-cuts-kr-puram"),
-    alt: "A young client's haircut finished at Express Cuts Men's Salon, Ayyappa Nagar",
+    alt: "A young client's haircut finished at Express Cuts Unisex Salon, Ayyappa Nagar",
     width: 1100,
     height: 1358,
     category: "The Experience",

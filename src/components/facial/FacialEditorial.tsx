@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { SITE, TEL } from "@/lib/site";
@@ -47,9 +48,9 @@ export function FacialEditorial() {
             quiet confidence of skin that feels looked after.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <a href="#offers" className={btn("outline-light", "md")}>
+            <Link href="#offers" className={btn("outline-light", "md")}>
               See facial offers from ₹{FACIAL_FROM} <Arrow />
-            </a>
+            </Link>
             <a
               href={TEL}
               className="inline-flex items-center gap-2.5 text-[14px] text-ivory-soft transition-colors hover:text-ivory"

@@ -3,6 +3,7 @@ import { Bodoni_Moda, Inter, Mrs_Saint_Delafield } from "next/font/google";
 import "./globals.css";
 import { MotionPrefs } from "@/components/motion/MotionPrefs";
 import { SITE } from "@/lib/site";
+import { Analytics } from "@/components/analytics/Analytics";
 import { siteSchema } from "@/lib/schema";
 
 const display = Bodoni_Moda({
@@ -24,20 +25,22 @@ const signature = Mrs_Saint_Delafield({
   weight: "400",
   variable: "--font-signature",
   display: "swap",
+  preload: false, // footer only: it must not compete with the hero photograph
 });
 
+const title = "Men's Salon in KR Puram | Express Cuts Unisex Salon";
 const description =
-  "Men's salon in Ayyappa Nagar, KR Puram, Bengaluru: haircuts from ₹99, beard grooming, facials, hair spa and hair colour. Walk-ins welcome, open 7 days.";
+  "Men's haircuts and beard grooming at Express Cuts Unisex Salon in KR Puram, Bengaluru. Explore haircuts, facials, hair spa and grooming offers.";
 
 export const metadata: Metadata = {
   ...(SITE.url ? { metadataBase: new URL(SITE.url) } : {}),
   title: {
-    default: "Men's Salon in KR Puram, Bengaluru | Express Cuts",
-    template: "%s · Express Cuts Men's Salon",
+    default: title,
+    template: `%s · ${SITE.name}`,
   },
   description,
   openGraph: {
-    title: "Men's Salon in KR Puram, Bengaluru | Express Cuts",
+    title,
     url: "/",
     description,
     type: "website",
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
         url: "/images/hero/home-hero.webp",
         width: 1733,
         height: 908,
-        alt: "Inside Express Cuts Men's Salon in Ayyappa Nagar, KR Puram, Bengaluru",
+        alt: "Inside Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram, Bengaluru",
       },
     ],
   },
@@ -87,6 +90,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <MotionPrefs>
           {children}
         </MotionPrefs>
+        <Analytics />
       </body>
     </html>
   );

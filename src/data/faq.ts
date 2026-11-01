@@ -18,7 +18,7 @@ export const FAQS: Faq[] = [
     a: [`Monday to Friday: ${hours(0)}\nSaturday and Sunday: ${hours(1)}`],
   },
   {
-    q: "Where is Express Cuts Men's Salon located?",
+    q: "Where is Express Cuts Unisex Salon located?",
     a: [`${SITE.addressLines.join(" ").replace(/,$/, "")}.`],
   },
   {
@@ -39,7 +39,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is Express Cuts unisex?",
-    a: ["The salon is identified as Salon-Unisex."],
+    a: ["Yes. Express Cuts is a unisex salon."],
   },
   {
     q: "How far is the salon from Hoodi Circle?",

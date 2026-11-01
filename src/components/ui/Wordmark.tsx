@@ -1,15 +1,6 @@
 import { cn } from "@/lib/cn";
 
-export function Wordmark({
-  tone = "dark",
-  tagline,
-  className,
-}: {
-  tone?: "dark" | "light";
-  /** Replaces the second line; the homepage navigation swaps it on phones */
-  tagline?: React.ReactNode;
-  className?: string;
-}) {
+export function Wordmark({ tone = "dark", className }: { tone?: "dark" | "light"; className?: string }) {
   return (
     <span className={cn("inline-flex flex-col leading-none", className)}>
       <span
@@ -26,7 +17,7 @@ export function Wordmark({
           tone === "dark" ? "text-ink-muted" : "text-ivory-muted",
         )}
       >
-        {tagline ?? <>Men&rsquo;s Salon</>}
+        Unisex Salon
       </span>
     </span>
   );

@@ -77,7 +77,7 @@ export function SalonGallery() {
             A Place Built for You.
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            Take a look inside Express Cuts Men&rsquo;s Salon in Ayyappa Nagar, KR Puram.
+            Take a look inside Express Cuts Unisex Salon in Ayyappa Nagar, KR Puram.
           </p>
           <Link href="/gallery" className={btn("outline", "sm", "mt-5")}>
             View the full gallery <Arrow className="size-3.5" />
