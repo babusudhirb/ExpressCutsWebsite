@@ -1,8 +1,7 @@
-:HL["/_next/static/chunks/38jc_stn4k78c.css","style"]
-:HL["/_next/static/chunks/3oid5ukv4-oz3.css","style"]
-:HL["/_next/static/media/02f8c82079ee3c71-s.p.0wv_63afy57i_.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/1e_frgly89n5u.css","style"]
+:HL["/_next/static/chunks/2-n1_zoymll4b.css","style"]
 :HL["/_next/static/media/10a4c8eca0b9ce81-s.p.0rrr4v4rsoo3q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/1bffadaabf893a1e-s.p.3-6t-g6q0vh0a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/28f82cd8566a528f-s.p.14og3_uq6yls0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"blog","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"mens-haircut-styles-how-to-choose","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"swLC97vfMTPWnJrS8-ZWG"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"blog","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"mens-haircut-styles-how-to-choose","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"nqzIwBILUfE7l5X2pL8co"}

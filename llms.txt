@@ -1,0 +1,38 @@
+# Express Cuts Unisex Salon
+
+> Express Cuts is a unisex salon in KR Puram, Bengaluru, offering men's haircuts, beard grooming, facials, hair spa and hair colour services.
+
+## Contact
+- Website: https://expresscuts.co.in/
+- Address: 25/2, Ayyappa Nagar Main Rd, Priyadarshini Layout, Krishnarajapuram, Bengaluru, Karnataka 560037
+- Location: Ayyappa Nagar, KR Puram, 2 KM from Hoodi Circle
+- Phone: +91 89700 00135
+- WhatsApp: https://wa.me/918970000135
+- Google Maps: https://maps.app.goo.gl/vHPC961Ncd1EBFVN6
+
+## Opening hours
+- Monday – Friday: 08:00 AM – 10:00 PM
+- Saturday – Sunday: 07:00 AM – 10:00 PM
+
+## Services
+- [Hair](https://expresscuts.co.in/hair/)
+- [Beard](https://expresscuts.co.in/beard/)
+- [Facial](https://expresscuts.co.in/facial/)
+- [Hair Spa](https://expresscuts.co.in/hair-spa/)
+- [Hair Color](https://expresscuts.co.in/hair-color/)
+- [Offers and grooming packages](https://expresscuts.co.in/offers/)
+
+## About
+- [Our Story](https://expresscuts.co.in/our-story/)
+- [Gallery](https://expresscuts.co.in/gallery/)
+- [FAQs](https://expresscuts.co.in/faq/)
+
+## Blog
+- [All articles](https://expresscuts.co.in/blog/)
+- [Men's Haircut Styles: How to Choose a Style That Suits You](https://expresscuts.co.in/blog/mens-haircut-styles-how-to-choose/)
+- [How Often Should Men Get a Haircut?](https://expresscuts.co.in/blog/how-often-should-men-get-a-haircut/)
+- [Men's Beard Grooming: Trimming, Shaping and Maintenance](https://expresscuts.co.in/blog/mens-beard-grooming-trimming-shaping-guide/)
+- [Men's Facial: What to Expect and How to Choose](https://expresscuts.co.in/blog/mens-facial-what-to-expect/)
+- [Hair Spa vs Regular Hair Wash: What's the Difference?](https://expresscuts.co.in/blog/hair-spa-vs-regular-hair-wash/)
+- [Men's Hair Color: Grey Coverage, Highlights and Streaks](https://expresscuts.co.in/blog/mens-hair-color-grey-coverage-highlights-streaks/)
+- [Visiting Express Cuts in KR Puram: A First-Visit Guide](https://expresscuts.co.in/blog/express-cuts-kr-puram-first-visit-guide/)
