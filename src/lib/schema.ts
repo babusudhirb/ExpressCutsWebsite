@@ -101,6 +101,42 @@ export const faqSchema = (faqs: { q: string; a: string }[]) => ({
   })),
 });
 
+/** One blog article. Author and publisher are the salon itself, never a second entity. */
+export const articleSchema = ({
+  title,
+  description,
+  path,
+  image,
+  published,
+  modified,
+  keywords,
+  section,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  image: string;
+  published: string;
+  modified: string;
+  keywords: string[];
+  section: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  image: [abs(image)],
+  datePublished: published,
+  dateModified: modified,
+  author: { "@type": "HairSalon", "@id": BUSINESS_ID, name: SITE.name, url: abs("/our-story") },
+  publisher: businessRef,
+  mainEntityOfPage: { "@type": "WebPage", "@id": abs(path) },
+  articleSection: section,
+  keywords: keywords.join(", "),
+  inLanguage: "en-IN",
+  isPartOf: { "@type": "Blog", "@id": abs("/blog#blog") },
+});
+
 /** The single <script> the root layout renders */
 export const siteSchema = () => ({
   "@context": "https://schema.org",

@@ -19,6 +19,8 @@
   --color-line: #e5dcd0;
   --color-champagne: #a9845a;
   --color-champagne-soft: #e8dccb;
+  --color-bronze: #855a29; /* gold links and labels on cream */
+  --color-gold: #cda265; /* gold eyebrows on night grounds */
   --color-price: #c8102e;
   --color-call: #1b7a4a; /* offer-card Call buttons only — 5.4:1 with white */
   --color-call-deep: #145c38;

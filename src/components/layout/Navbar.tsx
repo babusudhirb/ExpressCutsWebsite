@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { ChevronDown, Menu, Phone } from "lucide-react";
-import { NAV, TEL, inServices, isGroup, waLink, type NavItem } from "@/lib/site";
+import { NAV, TEL, inServices, isActivePath, isGroup, waLink, type NavItem } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { CallBtn2, WaBtn2 } from "@/components/offer-card/actions";
@@ -45,7 +45,7 @@ export function Navbar() {
           : "shadow-[0_1px_0_var(--color-line)]",
       )}
     >
-      <nav aria-label="Primary" className="shell flex h-[var(--nav-h)] items-center gap-6">
+      <nav aria-label="Primary" className="shell flex h-[var(--nav-h)] items-center gap-6 lg:gap-3 xl:gap-6">
         <Link href="/" aria-label="Express Cuts Men's Salon — home" className="shrink-0">
           <Wordmark
             tagline={
@@ -60,7 +60,7 @@ export function Navbar() {
           />
         </Link>
 
-        <ul className="mx-auto hidden items-center gap-7 whitespace-nowrap lg:flex">
+        <ul className="mx-auto hidden items-center gap-3 whitespace-nowrap lg:flex xl:gap-7">
           {NAV.map((item) =>
             isGroup(item) ? (
               <li key={item.label}>
@@ -70,11 +70,11 @@ export function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={item.href === pathname ? "page" : undefined}
-                  className={cn(link, item.href === pathname ? "text-ink" : "text-ink-soft hover:text-ink")}
+                  aria-current={item.href === pathname ? "page" : isActivePath(item.href, pathname) ? "true" : undefined}
+                  className={cn(link, isActivePath(item.href, pathname) ? "text-ink" : "text-ink-soft hover:text-ink")}
                 >
                   {item.label}
-                  <Underline on={item.href === pathname} />
+                  <Underline on={isActivePath(item.href, pathname)} />
                 </Link>
               </li>
             ),

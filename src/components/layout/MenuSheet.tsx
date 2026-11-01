@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, X } from "lucide-react";
-import { NAV, SITE, inServices, isGroup, waLink } from "@/lib/site";
+import { NAV, SITE, inServices, isActivePath, isGroup, waLink } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { HoursList } from "@/components/ui/HoursList";
@@ -68,10 +68,10 @@ export function MenuSheet({ open, onClose, pathname }: Props) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      aria-current={item.href === pathname ? "page" : undefined}
+                      aria-current={item.href === pathname ? "page" : isActivePath(item.href, pathname) ? "true" : undefined}
                       className={cn(
                         "flex items-baseline justify-between py-3.5 font-display text-[28px] leading-tight transition-colors sm:text-[32px]",
-                        item.href === pathname ? "italic text-champagne" : "text-ink hover:text-champagne",
+                        isActivePath(item.href, pathname) ? "italic text-champagne" : "text-ink hover:text-champagne",
                       )}
                     >
                       {item.label}

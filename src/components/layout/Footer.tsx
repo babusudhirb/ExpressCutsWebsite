@@ -13,7 +13,7 @@ export function Footer() {
           <Link href="/" aria-label="Express Cuts Men's Salon — home" className="self-start">
             <Wordmark tone="light" />
           </Link>
-          {/* Four destinations; every service page sits under Services */}
+          {/* Read from NAV; every service page sits under Services */}
           <nav aria-label="Footer" className="flex flex-wrap items-start gap-x-12 gap-y-8 text-[14px]">
             {NAV.map((item) =>
               isGroup(item) ? (

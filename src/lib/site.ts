@@ -65,10 +65,16 @@ export const NAV: (NavItem | NavGroup)[] = [
   { label: "Services", children: SERVICE_NAV },
   { label: "Offers", href: "/offers" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQs", href: "/faq" },
   { label: "Our Story", href: "/our-story" },
 ];
 
 export const isGroup = (item: NavItem | NavGroup): item is NavGroup => "children" in item;
+
+/** True on a nav item's own route and on the pages beneath it (Blog stays lit on an article) */
+export const isActivePath = (href: string, pathname: string) =>
+  href === pathname || (href !== "/" && pathname.startsWith(`${href}/`));
 
 /** True while the current route belongs to the Services group */
 export const inServices = (pathname: string) => SERVICE_NAV.some((s) => s.href === pathname);
